@@ -29,6 +29,13 @@ export default function HeaderLinks() {
         name: "enkv@pm.me",
         icon: <Mail size={14} className="mr-1" />,
         href: "mailto:enkv@pm.me",
+        render: (
+          <div className="relative h-2 w-2">
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="h-2 w-2 animate-pulse rounded-full bg-green-500"></div>
+            </div>
+          </div>
+        ),
       },
       {
         name: "Resume",
@@ -42,7 +49,7 @@ export default function HeaderLinks() {
     "flex h-8 space-x-1 h-7 rounded-lg border bg-gray-100 text-black hover:bg-gray-200 dark:bg-neutral-900 dark:text-white hover:dark:border-neutral-700 dark:hover:bg-neutral-800";
   return (
     <div className="mt-5 flex grid-cols-3 gap-2">
-      {links.map(({ href, icon, name }, index) => (
+      {links.map(({ href, icon, name, render }, index) => (
         <div key={index}>
           {href && (
             <Link
@@ -55,6 +62,7 @@ export default function HeaderLinks() {
             >
               {icon}
               {name}
+              {Boolean(render) && render}
             </Link>
           )}
         </div>
