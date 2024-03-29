@@ -12,7 +12,7 @@ export default function ExperienceCard({
 }) {
   const { company, website, roles, location } = experience;
   const extractedObjects = Object.entries(stacks).reduce(
-    (acc: Record<string, string>, [category, childObject]) => {
+    (acc: Record<string, string>, [_, childObject]) => {
       Object.entries(childObject).forEach(([key, value]) => {
         acc[key] = value;
       });
