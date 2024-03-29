@@ -20,7 +20,7 @@ export default function ThemeSwitcher() {
   return (
     <Button
       size={"sm"}
-      className="flex h-8 space-x-1 rounded-lg border bg-gray-100 text-black hover:bg-gray-200 dark:bg-neutral-900 dark:text-white"
+      className="flex h-8 space-x-1 rounded-lg border bg-gray-100 text-black hover:bg-gray-200 dark:bg-neutral-900 dark:text-white hover:dark:border-neutral-700 dark:hover:bg-neutral-800"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
     >
       {theme === "dark" ? (
