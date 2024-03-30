@@ -9,13 +9,16 @@ export default function PageLayout({
 }) {
   return (
     <>
-      <div className="z-20 flex h-screen flex-col lg:flex-row ">
+      <div className="z-20 flex h-screen flex-col lg:flex-row">
         <main className="z-10 mx-auto flex h-full w-full flex-col items-center gap-6 bg-black bg-white px-4 py-20 dark:bg-black  sm:px-6 lg:px-8">
           <div
             className={cn(
               "w-[90vw] rounded-t-lg sm:w-[90vw] md:w-[60vw] lg:w-[60vw]",
             )}
           >
+            <div className="fixed left-0 top-0 -z-10 h-full w-full">
+              <div className="absolute top-0 z-[-2] h-screen w-screen bg-green-100/20 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] opacity-40 dark:bg-neutral-950 dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] dark:opacity-100"></div>
+            </div>
             <div className="flex flex-col">
               {children}
               <div className="h-20" />
