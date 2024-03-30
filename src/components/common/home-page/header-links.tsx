@@ -48,7 +48,7 @@ export default function HeaderLinks() {
   const cname =
     "flex h-8 space-x-1 h-7 rounded-lg border bg-gray-100 text-black hover:bg-gray-200 dark:bg-neutral-900 dark:text-white hover:dark:border-neutral-700 dark:hover:bg-neutral-800";
   return (
-    <div className="mt-5 flex grid-cols-3 gap-2">
+    <div className="mt-5 flex flex-wrap">
       {links.map(({ href, icon, name, render }, index) => (
         <div key={index}>
           {href && (
@@ -57,6 +57,7 @@ export default function HeaderLinks() {
               className={cn(
                 buttonVariants({ variant: "default", size: "sm" }),
                 cname,
+                "mr-2 mt-2",
               )}
               href={href}
             >

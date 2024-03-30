@@ -10,14 +10,14 @@ export default function Stacks() {
       <h1 className="mb-4 text-xl font-semibold">Skills</h1>
       {Object.entries(stacks).map(([category, items]) => (
         <div className="my-2" key={category}>
-          <h2 className="mb-2 ml-1 text-sm font-semibold">
+          <h2 className="ml-1 text-sm font-semibold sm:mb-2">
             {_.startCase(_.toLower(category))}
           </h2>
-          <div className="grid grid-cols-6 gap-2">
+          <div className="wrap flex flex-wrap">
             {Object.entries(items).map(([name, src], index) => (
               <div
                 className={cn(
-                  "flex h-8 px-2",
+                  "mr-2 mt-2 flex h-8 px-2",
                   buttonVariants({ variant: "outline", size: "sm" }),
                 )}
                 key={index}

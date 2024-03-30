@@ -60,13 +60,13 @@ export default function ExperienceCard({
                     </p>
                   ))}
                 </div>
-                <div className="mt-3 flex space-x-2">
+                <div className="mt-3 flex w-full flex-wrap sm:space-x-2">
                   {stack.map((stk, index) => {
                     const src = extractedObjects[stk];
                     return (
                       <Badge
                         variant={"outline"}
-                        className="h-5 rounded-md"
+                        className="mr-2 mt-2 h-5 rounded-md"
                         key={index}
                       >
                         {src && (

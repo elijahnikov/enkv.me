@@ -13,7 +13,7 @@ export default function ProfileHeader() {
   const currentTimeInLondon = formatter.format(now);
   return (
     <div>
-      <div className="flex">
+      <div className="block sm:flex">
         <Image
           src={
             "https://utfs.io/f/248fc5d3-0da0-4d86-85a1-a44e48020e27-h2az4q.jpg"
@@ -24,7 +24,7 @@ export default function ProfileHeader() {
           width={150}
           height={150}
         />
-        <div className="w-full pl-6">
+        <div className="mt-4 w-full pl-0 sm:mt-0 sm:pl-6">
           <div className="flex items-center space-x-1">
             <h1 className="text-2xl font-bold">Elijah Posnikov</h1>
             <p className="mt-[5px] text-neutral-400">enkv</p>
