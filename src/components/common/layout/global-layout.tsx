@@ -16,7 +16,10 @@ export default function PageLayout({
               "w-[90vw] rounded-t-lg sm:w-[90vw] md:w-[60vw] lg:w-[60vw]",
             )}
           >
-            <div className="flex flex-col">{children}</div>
+            <div className="flex flex-col">
+              {children}
+              <div className="h-20" />
+            </div>
           </div>
         </main>
       </div>

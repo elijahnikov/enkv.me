@@ -47,11 +47,13 @@ export default function ExperienceCard({
                 <div>
                   <p className="text-md">{title}</p>
                 </div>
-                <p className="text-xs dark:text-neutral-500">{duration}</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-500">
+                  {duration}
+                </p>
                 <div className="mt-2 space-y-2">
                   {pointers.map((pointers, index) => (
                     <p
-                      className="mt-1 text-sm dark:text-neutral-300"
+                      className="mt-1 text-sm text-neutral-600 dark:text-neutral-300"
                       key={index}
                     >
                       - {pointers}
