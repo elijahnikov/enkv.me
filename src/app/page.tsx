@@ -18,10 +18,7 @@ export default function HomePage() {
         <WorkExperience />
         <Stacks />
       </div>
-      <div className="flex h-14 items-center rounded-b-2xl border-t-[0.5px] bg-neutral-100/50 px-4 dark:border-neutral-700 dark:bg-neutral-900/70">
-        <div className="w-full" />
-        <PrintButton />
-      </div>
+      <div className="flex h-14 items-center rounded-b-2xl border-t-[0.5px] bg-neutral-100/50 px-4 dark:border-neutral-700 dark:bg-neutral-900/70" />
     </main>
   );
 }
