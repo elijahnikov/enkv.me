@@ -2,6 +2,7 @@ import HeaderLinks from "@/components/common/home-page/header-links";
 import ProfileHeader from "@/components/common/home-page/profile-header";
 import WorkExperience from "@/components/common/home-page/experience/work-experience";
 import ThemeSwitcher from "@/components/common/theme-switcher";
+import Stacks from "@/components/common/home-page/stacks";
 
 export default function HomePage() {
   return (
@@ -14,6 +15,7 @@ export default function HomePage() {
         <ProfileHeader />
         <HeaderLinks />
         <WorkExperience />
+        <Stacks />
       </div>
     </main>
   );

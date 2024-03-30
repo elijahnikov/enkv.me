@@ -25,30 +25,40 @@ export const stacks: StacksType = {
     Vercel:
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg",
     AWS: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
-    Upstash: "https://cdn.svgporn.com/logos/upstash-icon.svg",
-    Supabase: "https://cdn.svgporn.com/logos/supabase-icon.svg",
-    Planetscale: "https://cdn.svgporn.com/logos/planetscale.svg",
+    Upstash: "",
+    Supabase:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg",
+    Planetscale: "",
   },
   "tools and frameworks": {
     React:
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-    // "Next.js": "https://cdn.svgporn.com/logos/nextjs-icon.svg",
-    // "Node.js": "https://cdn.svgporn.com/logos/nodejs-icon.svg",
-    GraphQL: "https://cdn.svgporn.com/logos/graphql.svg",
-    Prisma: "https://cdn.svgporn.com/logos/prisma.svg",
-    // Flask: "https://cdn.svgporn.com/logos/flask.svg",
-    tRPC: "https://cdn.svgporn.com/logos/trpc.svg",
-    // "React Query": "https://cdn.svgporn.com/logos/react-query-icon.svg",
-    Tailwind: "https://cdn.svgporn.com/logos/tailwindcss-icon.svg",
-    "D3.js": "https://cdn.svgporn.com/logos/d3.svg",
-    Apollo: "https://cdn.svgporn.com/logos/apollostack.svg",
+    "Next.js":
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+    "Node.js":
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
+    GraphQL:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/graphql/graphql-plain.svg",
+    Prisma:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg",
+    Flask:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg",
+    tRPC: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/trpc/trpc-original.svg",
+    "React Query": "",
+    Tailwind:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+    "D3.js":
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/d3js/d3js-plain.svg",
+    Apollo: "",
     "Express.js":
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
   },
   testing: {
-    // Cypress: "https://cdn.svgporn.com/logos/cypress-icon.svg",
-    Jest: "https://cdn.svgporn.com/logos/jest.svg",
-    Storybook: "https://cdn.svgporn.com/logos/storybook-icon.svg",
+    Cypress:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cypressio/cypressio-original.svg",
+    Jest: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg",
+    Storybook:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/storybook/storybook-original.svg",
   },
 };
 
