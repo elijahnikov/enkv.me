@@ -3,7 +3,6 @@ import ProfileHeader from "@/components/common/home-page/profile-header";
 import WorkExperience from "@/components/common/home-page/experience/work-experience";
 import ThemeSwitcher from "@/components/common/theme-switcher";
 import Stacks from "@/components/common/home-page/stacks";
-import PrintButton from "@/components/common/print";
 
 export default function HomePage() {
   return (

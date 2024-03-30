@@ -1,6 +1,7 @@
 import PageLayout from "@/components/common/layout/global-layout";
 import { cn } from "@/lib/utils";
 import "@/styles/globals.css";
+import { Analytics } from "@vercel/analytics/react";
 
 import { Inter as FontSans } from "next/font/google";
 import Providers from "./providers";
@@ -32,6 +33,7 @@ export default function RootLayout({
         <Providers>
           <PageLayout>{children}</PageLayout>
         </Providers>
+        <Analytics />
       </body>
     </html>
   );
