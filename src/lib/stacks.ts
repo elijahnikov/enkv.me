@@ -22,8 +22,7 @@ export const stacks: StacksType = {
     Java: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
   },
   cloud: {
-    Vercel:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg",
+    Vercel: "",
     AWS: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
     Upstash: "",
     Supabase:
@@ -41,8 +40,7 @@ export const stacks: StacksType = {
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/graphql/graphql-plain.svg",
     Prisma:
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg",
-    Flask:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg",
+    Flask: "",
     tRPC: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/trpc/trpc-original.svg",
     "React Query": "",
     Tailwind:
@@ -50,8 +48,7 @@ export const stacks: StacksType = {
     "D3.js":
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/d3js/d3js-plain.svg",
     Apollo: "",
-    "Express.js":
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
+    "Express.js": "",
   },
   testing: {
     Cypress:
