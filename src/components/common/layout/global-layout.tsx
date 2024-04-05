@@ -17,7 +17,8 @@ export default function PageLayout({
             )}
           >
             <div className="fixed left-0 top-0 -z-10 h-full w-full">
-              <div className="absolute top-0 z-[-2] h-screen w-screen bg-green-100/20 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] opacity-40 dark:bg-neutral-950 dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] dark:opacity-100"></div>
+              {/* <div className="absolute top-0 z-[-2] h-screen w-screen bg-green-100/20 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] opacity-40 dark:bg-neutral-950 dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] dark:opacity-100"></div> */}
+              <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] dark:bg-neutral-950 dark:bg-[radial-gradient(#3d3d3d,transparent_1px)]"></div>
             </div>
             <div className="flex flex-col">
               {children}
