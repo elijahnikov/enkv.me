@@ -1,16 +1,6 @@
-import { Clock, MapPin } from "lucide-react";
 import Image from "next/image";
 
 export default function ProfileHeader() {
-  const now = new Date();
-  const formatter = new Intl.DateTimeFormat("en-US", {
-    timeZone: "Europe/London",
-    hour12: true,
-    hour: "numeric",
-    minute: "numeric",
-    timeZoneName: "short",
-  });
-  const currentTimeInLondon = formatter.format(now);
   return (
     <div>
       <div className="flex">
@@ -36,27 +26,6 @@ export default function ProfileHeader() {
             and a passion for turning awesome ideas into sleek, user friendly
             software solutions.
           </p>
-          {/* <div className="mt-2 text-xs text-neutral-700 dark:text-neutral-300/80">
-            <p>
-              I develop things as a Software Developer at{" "}
-              <a
-                href="https://www.airfinity.com/"
-                className="text-sm font-semibold text-black underline dark:text-white"
-              >
-                Airfinity
-              </a>
-            </p>
-          </div> */}
-          {/* <div className="mt-4 flex items-center space-x-3 text-xs dark:text-white">
-            <div className="flex items-center space-x-1">
-              <MapPin className="dark:text-neutral-100" size={14} />
-              <p>London - United Kingdom</p>
-            </div>
-            <div className="flex items-center space-x-1">
-              <Clock className="dark:text-neutral-100" size={14} />
-              <p>{currentTimeInLondon}</p>
-            </div>
-          </div> */}
         </div>
       </div>
     </div>

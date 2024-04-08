@@ -1,10 +1,12 @@
+import WorkExperience from "@/components/common/home-page/experience/work-experience";
 import ProfileHeader from "@/components/common/home-page/profile-header";
+import SecondaryProfileHeader from "@/components/common/home-page/secondary-profile-header";
 import Island from "@/components/common/island/island";
 import { Card } from "@/components/ui/card";
 
 export default function HomePage() {
   return (
-    <main className="mx-auto flex w-full flex-col justify-center space-y-2">
+    <main className="mx-auto flex w-full flex-col justify-center space-y-4">
       <div className="flex justify-center">
         <Card className="w-[60%] p-4">
           <div>
@@ -15,20 +17,15 @@ export default function HomePage() {
       <div className="flex justify-center">
         <Card className="w-[60%] p-4">
           <div>
-            {/* <div className="mt-4 flex items-center space-x-3 text-xs dark:text-white">
-            <div className="flex items-center space-x-1">
-              <MapPin className="dark:text-neutral-100" size={14} />
-              <p>London - United Kingdom</p>
-            </div>
-            <div className="flex items-center space-x-1">
-              <Clock className="dark:text-neutral-100" size={14} />
-              <p>{currentTimeInLondon}</p>
-            </div>
-          </div> */}
+            <SecondaryProfileHeader />
           </div>
         </Card>
       </div>
-
+      <div className="flex justify-center">
+        <Card className="flex w-[60%] justify-center px-6 py-2">
+          <WorkExperience />
+        </Card>
+      </div>
       <Island />
 
       {/* <div className="p-10">

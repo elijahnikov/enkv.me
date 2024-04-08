@@ -4,6 +4,7 @@ import { stacks } from "@/lib/stacks";
 import { Briefcase, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import Sticker from "../../sticker";
 
 export default function ExperienceCard({
   experience,
@@ -12,7 +13,7 @@ export default function ExperienceCard({
 }) {
   const { company, website, roles, location } = experience;
   const extractedObjects = Object.entries(stacks).reduce(
-    (acc: Record<string, string>, [_, childObject]) => {
+    (acc: Record<string, string | React.ReactNode>, [_, childObject]) => {
       Object.entries(childObject).forEach(([key, value]) => {
         acc[key] = value;
       });
@@ -42,7 +43,7 @@ export default function ExperienceCard({
               </Badge>
             </div>
             {roles.map(({ duration, pointers, stack, title, id }) => (
-              <div key={id} className="mt-4">
+              <div key={id} className="mt-2">
                 <div className="absolute -start-[6.5px] mt-[6px] flex h-3 w-3 items-center justify-center rounded-full border bg-white dark:bg-black "></div>
                 <div>
                   <p className="text-md">{title}</p>
@@ -50,7 +51,7 @@ export default function ExperienceCard({
                 <p className="text-xs text-neutral-500 dark:text-neutral-500">
                   {duration}
                 </p>
-                <div className="mt-2 space-y-2">
+                {/* <div className="mt-2 space-y-2">
                   {pointers.map((pointers, index) => (
                     <p
                       className="mt-1 text-sm text-neutral-600 dark:text-neutral-300"
@@ -59,27 +60,42 @@ export default function ExperienceCard({
                       - {pointers}
                     </p>
                   ))}
-                </div>
-                <div className="mt-3 flex w-full flex-wrap sm:space-x-2">
+                </div> */}
+                <div className="-ml-[6px] flex flex-wrap -space-x-2">
                   {stack.map((stk, index) => {
                     const src = extractedObjects[stk];
                     return (
-                      <Badge
-                        variant={"outline"}
-                        className="mr-2 mt-2 h-5 rounded-md"
-                        key={index}
-                      >
-                        {src && (
-                          <Image
-                            width={12}
-                            height={12}
-                            src={src}
-                            alt={stk}
-                            className="mr-1"
-                          />
-                        )}
-                        {stk}
-                      </Badge>
+                      // <Badge
+                      //   variant={"outline"}
+                      //   className="mr-2 mt-2 h-5 rounded-md"
+                      //   key={index}
+                      // >
+                      //   {src && (
+                      //     <Image
+                      //       width={12}
+                      //       height={12}
+                      //       src={src}
+                      //       alt={stk}
+                      //       className="mr-1"
+                      //     />
+                      //   )}
+                      //   {stk}
+                      // </Badge>
+                      <div key={index}>
+                        <svg
+                          viewBox="0 0 128 128"
+                          className="absolute z-10 h-[36px] max-h-[36px] w-[36px] max-w-[36px] overflow-visible p-2"
+                        >
+                          {src}
+                        </svg>
+                        <svg
+                          viewBox="0 0 128 128"
+                          className="sticker  h-[36px] max-h-[36px] w-[36px] max-w-[36px] overflow-visible p-2 drop-shadow-[rgba(0,_0,_0,_0.24)_0px_0.5px_1px]	"
+                        >
+                          {src}
+                        </svg>
+                      </div>
+                      // <Sticker key={index}>{src}</Sticker>
                     );
                   })}
                 </div>
