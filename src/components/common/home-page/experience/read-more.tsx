@@ -24,19 +24,16 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
-import Image from "next/image";
 
 export function ReadMore({
   pointers,
   company,
   title,
-  localeImage,
   location,
 }: {
   pointers: string[];
   company: string;
   title: string;
-  localeImage: string;
   location: string;
 }) {
   const [open, setOpen] = React.useState(false);
@@ -80,19 +77,12 @@ export function ReadMore({
           Read more
         </div>
       </DrawerTrigger>
-      <DrawerContent>
+      <DrawerContent className="w-[90vw]">
         <DrawerHeader className="text-left">
           <DrawerTitle>{title}</DrawerTitle>
           <DrawerDescription>{company}</DrawerDescription>
         </DrawerHeader>
         <div className="mb-2 space-y-2">
-          <Image
-            src={localeImage}
-            alt={location}
-            width={440}
-            height={80}
-            className="mb-4 rounded-lg border shadow-sm"
-          />
           {pointers.map((pointers, index) => (
             <p
               className="mt-1 text-sm text-neutral-700 dark:text-neutral-400"
@@ -109,13 +99,5 @@ export function ReadMore({
         </DrawerFooter>
       </DrawerContent>
     </Drawer>
-  );
-}
-
-function ProfileForm({ className }: React.ComponentProps<"form">) {
-  return (
-    <form className={cn("grid items-start gap-4", className)}>
-      <Button type="submit">Save changes</Button>
-    </form>
   );
 }

@@ -62,7 +62,6 @@ export default function ExperienceCard({
 
                 <ReadMore
                   location={location}
-                  localeImage={localeImage}
                   company={company}
                   title={title}
                   pointers={pointers}
