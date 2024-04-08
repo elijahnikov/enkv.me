@@ -1,7 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { type ExperienceType } from "@/lib/experience";
 import { stacks } from "@/lib/stacks";
-import { Briefcase, ExternalLink } from "lucide-react";
+import { Briefcase, ExternalLink, MapPin } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import Sticker from "../../sticker";
@@ -18,7 +18,7 @@ export default function ExperienceCard({
 }: {
   experience: ExperienceType;
 }) {
-  const { company, website, roles, location } = experience;
+  const { company, website, roles, location, localeImage } = experience;
   const extractedObjects = Object.entries(stacks).reduce(
     (acc: Record<string, string | React.ReactNode>, [_, childObject]) => {
       Object.entries(childObject).forEach(([key, value]) => {
@@ -38,14 +38,15 @@ export default function ExperienceCard({
           <div className="w-full">
             <div className="flex items-center justify-between">
               <div className="flex items-center">
-                <h1 className="mt-[3px] text-lg font-semibold text-gray-900 dark:text-white">
+                <h1 className="text-md mt-[3px] font-semibold text-gray-900 dark:text-white">
                   {company}
                 </h1>
                 <Link href={website} target="_blank" className="ml-2 mt-1">
                   <ExternalLink size={16} />
                 </Link>
               </div>
-              <Badge variant={"outline"} className="text-xs">
+              <Badge variant={"default"} className="h-5 text-[10px]">
+                <MapPin size={12} className="mr-1" />
                 {location}
               </Badge>
             </div>
@@ -53,13 +54,19 @@ export default function ExperienceCard({
               <div key={id} className="mt-2">
                 <div className="absolute -start-[6.5px] mt-[6px] flex h-3 w-3 items-center justify-center rounded-full border bg-white dark:bg-black "></div>
                 <div>
-                  <p className="text-md">{title}</p>
+                  <p className="text-sm">{title}</p>
                 </div>
                 <p className="text-xs text-neutral-500 dark:text-neutral-500">
                   {duration}
                 </p>
 
-                <ReadMore company={company} title={title} pointers={pointers} />
+                <ReadMore
+                  location={location}
+                  localeImage={localeImage}
+                  company={company}
+                  title={title}
+                  pointers={pointers}
+                />
                 <div className="-ml-[6px] flex flex-wrap -space-x-2">
                   <TooltipProvider>
                     {stack.map((stk, index) => {

@@ -19,7 +19,6 @@ export default function GithubCard() {
             target="_blank"
           >
             <p>/elijahnikov</p>
-            <ExternalLink size={14} className="ml-1" />
           </Link>
         </div>
       </div>

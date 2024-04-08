@@ -8,6 +8,7 @@ export type ExperienceType = {
     stack: Array<string>;
   }>;
   location: string;
+  localeImage: string;
   website: string;
 };
 
@@ -16,6 +17,8 @@ export const experience: Array<ExperienceType> = [
     company: "Airfinity",
     website: "https://www.airfinity.com/",
     location: "London, UK",
+    localeImage:
+      "https://utfs.io/f/fd71f664-c7a6-403c-ae8c-15695ce813b8-t3r7du.png",
     roles: [
       {
         id: 1,
@@ -63,6 +66,8 @@ export const experience: Array<ExperienceType> = [
       },
     ],
     location: "London, UK",
+    localeImage:
+      "https://utfs.io/f/fd71f664-c7a6-403c-ae8c-15695ce813b8-t3r7du.png",
     website: "https://www.quantspark.com/askqs",
   },
   {
@@ -81,6 +86,8 @@ export const experience: Array<ExperienceType> = [
       },
     ],
     location: "Reading, UK",
+    localeImage:
+      "https://utfs.io/f/5d2c1435-291e-4fbb-ab5f-ba01e4c589d9-7lquzu.png",
     website: "https://www.hp.com/gb-en/home.html",
   },
 ];

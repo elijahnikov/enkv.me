@@ -1,7 +1,6 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 
 import { BsLinkedin } from "react-icons/bs";
@@ -20,7 +19,6 @@ export default function LinkedinCard() {
             target="_blank"
           >
             <p>/enkv</p>
-            <ExternalLink size={14} className="ml-1" />
           </Link>
         </div>
       </div>
