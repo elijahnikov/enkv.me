@@ -72,6 +72,13 @@
     stroke-linejoin: round;
   }
 
+  .dark-sticker {
+    stroke: gray;
+    stroke-width: 10;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
   .text-sticker {
     text-shadow:
       rgb(255, 255, 255) 8px 0px 0px,

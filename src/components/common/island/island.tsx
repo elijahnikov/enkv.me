@@ -1,5 +1,4 @@
 import { Separator } from "@/components/ui/separator";
-import ThemeSwitcher from "../theme-switcher";
 import HeaderLinks from "../home-page/header-links";
 import EmailButton from "./email-button";
 
@@ -9,8 +8,6 @@ export default function Island() {
       <EmailButton />
       <Separator orientation="vertical" className="mx-5 h-[40%]" />
       <HeaderLinks />
-      <Separator orientation="vertical" className="mx-5 h-[40%]" />
-      <ThemeSwitcher />
     </div>
   );
 }

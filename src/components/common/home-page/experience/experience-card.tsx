@@ -5,6 +5,13 @@ import { Briefcase, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import Sticker from "../../sticker";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { ReadMore } from "./read-more";
 
 export default function ExperienceCard({
   experience,
@@ -51,53 +58,37 @@ export default function ExperienceCard({
                 <p className="text-xs text-neutral-500 dark:text-neutral-500">
                   {duration}
                 </p>
-                {/* <div className="mt-2 space-y-2">
-                  {pointers.map((pointers, index) => (
-                    <p
-                      className="mt-1 text-sm text-neutral-600 dark:text-neutral-300"
-                      key={index}
-                    >
-                      - {pointers}
-                    </p>
-                  ))}
-                </div> */}
+
+                <ReadMore company={company} title={title} pointers={pointers} />
                 <div className="-ml-[6px] flex flex-wrap -space-x-2">
-                  {stack.map((stk, index) => {
-                    const src = extractedObjects[stk];
-                    return (
-                      // <Badge
-                      //   variant={"outline"}
-                      //   className="mr-2 mt-2 h-5 rounded-md"
-                      //   key={index}
-                      // >
-                      //   {src && (
-                      //     <Image
-                      //       width={12}
-                      //       height={12}
-                      //       src={src}
-                      //       alt={stk}
-                      //       className="mr-1"
-                      //     />
-                      //   )}
-                      //   {stk}
-                      // </Badge>
-                      <div key={index}>
-                        <svg
-                          viewBox="0 0 128 128"
-                          className="absolute z-10 h-[36px] max-h-[36px] w-[36px] max-w-[36px] overflow-visible p-2"
-                        >
-                          {src}
-                        </svg>
-                        <svg
-                          viewBox="0 0 128 128"
-                          className="sticker  h-[36px] max-h-[36px] w-[36px] max-w-[36px] overflow-visible p-2 drop-shadow-[rgba(0,_0,_0,_0.24)_0px_0.5px_1px]	"
-                        >
-                          {src}
-                        </svg>
-                      </div>
-                      // <Sticker key={index}>{src}</Sticker>
-                    );
-                  })}
+                  <TooltipProvider>
+                    {stack.map((stk, index) => {
+                      const src = extractedObjects[stk];
+                      return (
+                        <div key={index}>
+                          <Tooltip>
+                            <TooltipTrigger>
+                              <svg
+                                viewBox="0 0 128 128"
+                                className="absolute z-10 h-[36px] max-h-[36px] w-[36px] max-w-[36px] overflow-visible p-2"
+                              >
+                                {src}
+                              </svg>
+                              <svg
+                                viewBox="0 0 128 128"
+                                className="sticker h-[36px] max-h-[36px] w-[36px] max-w-[36px] overflow-visible p-2 drop-shadow-[rgba(0,_0,_0,_0.24)_0px_0.5px_1px]"
+                              >
+                                {src}
+                              </svg>
+                            </TooltipTrigger>
+                            <TooltipContent className="relative left-0 border-neutral-200 text-xs dark:border-neutral-800">
+                              {stk}
+                            </TooltipContent>
+                          </Tooltip>
+                        </div>
+                      );
+                    })}
+                  </TooltipProvider>
                 </div>
               </div>
             ))}
