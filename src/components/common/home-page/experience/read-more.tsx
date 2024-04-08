@@ -59,13 +59,6 @@ export function ReadMore({
             </DialogDescription>
           </DialogHeader>
           <div className="mb-2 space-y-2">
-            <Image
-              src={localeImage}
-              alt={location}
-              width={375}
-              height={80}
-              className="mb-4 rounded-lg border shadow-sm"
-            />
             {pointers.map((pointers, index) => (
               <p
                 className="mt-1 text-sm text-neutral-700 dark:text-neutral-400"

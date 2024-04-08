@@ -19,11 +19,11 @@ export default function ProfileHeader() {
             src={
               "https://utfs.io/f/248fc5d3-0da0-4d86-85a1-a44e48020e27-h2az4q.jpg"
             }
-            className="ml-4 rounded-full shadow-sm dark:border-neutral-500"
+            className="ml-4 rounded-full border-[8px] border-white shadow-sm drop-shadow-[rgba(0,_0,_0,_0.24)_0px_0.5px_1px] dark:border-neutral-500"
             alt="headshot"
             sizes="100vw"
-            width={180}
-            height={180}
+            width={200}
+            height={200}
           />
         </div>
 
