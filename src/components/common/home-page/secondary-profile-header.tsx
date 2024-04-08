@@ -19,10 +19,13 @@ export default function SecondaryProfileHeader() {
           <Link
             href={"https://airfinity.com"}
             target="_blank"
-            className="mx-1 flex items-center text-black underline dark:text-white"
+            className="mx-1 flex items-center font-semibold text-black dark:text-white"
           >
             Airfinity
-            <ExternalLink size={10} className="text-black dark:text-white" />
+            <ExternalLink
+              size={10}
+              className="ml-1 text-black dark:text-white"
+            />
           </Link>
         </p>
         <div className="flex space-x-2">
