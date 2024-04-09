@@ -13,7 +13,7 @@ import _ from "lodash";
 
 export default function Stacks() {
   return (
-    <div className="grid w-full grid-cols-2 gap-6">
+    <div className="grid w-full grid-cols-2 gap-4 xl:gap-8">
       {Object.entries(stacks).map(([category, items]) => (
         <Card className="p-4" key={category}>
           <div className="mb-2 flex items-center space-x-2">

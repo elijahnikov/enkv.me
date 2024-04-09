@@ -26,7 +26,7 @@ export const experience: Array<ExperienceType> = [
         duration: "July 2023 - Present",
         pointers: [
           `Led the initiative and development to transition from third-party software to an internally developed visualization solution, enhancing developer-friendliness, performance, and user experience. This strategic shift is expected to result in substantial cost and time efficiencies, delivering considerable value to the company. Resulted in improved render times by 10x and increased user retention throughout the SaaS application.`,
-          `Collaborating closely with product managers and analysts to expand and refine an internal SaaS tool, ensuring it delivers enhanced value to customers/clients. `,
+          `Collaborating closely with product managers and analysts to expand and refine an external, user facing SaaS tool, ensuring it delivers enhanced value to customers/clients. `,
           `Creating complex, reusable and efficient React UI components, enhancing UI/UX and contributing to improved application stability, scalability and performance.`,
         ],
         stack: [
