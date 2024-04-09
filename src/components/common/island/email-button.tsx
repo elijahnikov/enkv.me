@@ -1,4 +1,4 @@
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import {
   Tooltip,
   TooltipContent,
@@ -29,7 +29,7 @@ export default function EmailButton() {
             </span>
           </Link>
         </TooltipTrigger>
-        <TooltipContent className="border-neutral-200 text-xs dark:border-neutral-800">
+        <TooltipContent className="relative left-0 border-neutral-200 text-xs dark:border-neutral-800">
           Email me at enkv@pm.me
         </TooltipContent>
       </Tooltip>

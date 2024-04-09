@@ -1,5 +1,7 @@
 import { Clock, MapPin } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+import EmailButton from "../island/email-button";
 
 export default function ProfileHeader() {
   const now = new Date();
@@ -42,6 +44,9 @@ export default function ProfileHeader() {
             <div className="items-center text-sm text-neutral-600">
               <p>London, United Kingdom 🇬🇧 {currentTimeInLondon} 🕐</p>
             </div>
+          </div>
+          <div className="mt-6 w-[30%]">
+            <EmailButton />
           </div>
         </div>
       </div>

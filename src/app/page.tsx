@@ -45,7 +45,6 @@ export default function HomePage() {
               </Card>
             </div>
           </div>
-          <Island />
           <div className="h-20" />
         </div>
       </div>

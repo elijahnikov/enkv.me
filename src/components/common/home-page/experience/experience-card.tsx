@@ -63,7 +63,7 @@ export default function ExperienceCard({
                   title={title}
                   pointers={pointers}
                 />
-                <div className="-ml-[6px] mt-4 flex flex-wrap -space-x-2">
+                <div className="-ml-[6px] mt-4 flex flex-wrap -space-x-1">
                   <TooltipProvider>
                     {stack.map((stk, index) => {
                       const src = extractedObjects[stk];
