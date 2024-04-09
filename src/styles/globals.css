@@ -80,8 +80,8 @@
   }
 
   .backdropblur {
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
   }
 }
 

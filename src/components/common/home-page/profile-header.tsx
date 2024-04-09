@@ -27,7 +27,7 @@ export default function ProfileHeader() {
           />
         </div>
 
-        <div className="mt-4 w-full pl-0 sm:mt-0 sm:pl-6">
+        <div className="mt-4 w-full pl-0">
           <div className="flex items-center space-x-1">
             <h1 className="mt-4 text-[48px] font-bold">Elijah Posnikov</h1>
           </div>

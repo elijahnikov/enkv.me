@@ -1,11 +1,13 @@
 "use client";
 
-import { ExternalLink } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 import Link from "next/link";
 import GitHubCalendar from "react-github-calendar";
 import { BsGithub } from "react-icons/bs";
 
 export default function GithubCard() {
+  const isDesktop = useMediaQuery("(min-width: 660px)");
   return (
     <div className="flex justify-between overflow-hidden">
       <div>
@@ -21,6 +23,17 @@ export default function GithubCard() {
             <p>/elijahnikov</p>
           </Link>
         </div>
+        <div className="flex w-full">
+          <div>
+            <Button
+              size={"sm"}
+              variant={"secondary"}
+              className="mt-6 h-8 rounded-lg"
+            >
+              View
+            </Button>
+          </div>
+        </div>
       </div>
       <GitHubCalendar
         style={{ overflow: "hidden" }}
@@ -30,7 +43,8 @@ export default function GithubCard() {
         colorScheme="light"
         blockMargin={8}
         transformData={(data) => {
-          return data.slice(-30);
+          if (isDesktop) return data.slice(-31);
+          return data.slice(-80);
         }}
         hideTotalCount
         username="elijahnikov"
