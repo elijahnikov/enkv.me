@@ -12,13 +12,14 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { ReadMore } from "./read-more";
+import { Card } from "@/components/ui/card";
 
 export default function ExperienceCard({
   experience,
 }: {
   experience: ExperienceType;
 }) {
-  const { company, website, roles, location, localeImage } = experience;
+  const { company, website, roles, location } = experience;
   const extractedObjects = Object.entries(stacks).reduce(
     (acc: Record<string, string | React.ReactNode>, [_, childObject]) => {
       Object.entries(childObject).forEach(([key, value]) => {
@@ -29,14 +30,11 @@ export default function ExperienceCard({
     {},
   );
   return (
-    <li className="ms-4">
-      <div className="absolute -start-4 flex h-8 w-8 items-center justify-center rounded-full border bg-white p-2 dark:bg-black ">
-        <Briefcase />
-      </div>
-      <div className="pl-5 dark:border-slate-700">
-        <div className="flex justify-between">
+    <Card className="flex w-full p-2 py-4">
+      <div className="w-full px-5">
+        <div className="flex w-full justify-between">
           <div className="w-full">
-            <div className="flex items-center justify-between">
+            <div className="flex w-full items-center justify-between">
               <div className="flex items-center">
                 <h1 className="text-md mt-[3px] font-semibold text-gray-900 dark:text-white">
                   {company}
@@ -52,7 +50,6 @@ export default function ExperienceCard({
             </div>
             {roles.map(({ duration, pointers, stack, title, id }) => (
               <div key={id} className="mt-2">
-                <div className="absolute -start-[6.5px] mt-[6px] flex h-3 w-3 items-center justify-center rounded-full border bg-white dark:bg-black "></div>
                 <div>
                   <p className="text-sm">{title}</p>
                 </div>
@@ -66,7 +63,7 @@ export default function ExperienceCard({
                   title={title}
                   pointers={pointers}
                 />
-                <div className="-ml-[6px] flex flex-wrap -space-x-2">
+                <div className="-ml-[6px] mt-4 flex flex-wrap -space-x-2">
                   <TooltipProvider>
                     {stack.map((stk, index) => {
                       const src = extractedObjects[stk];
@@ -101,6 +98,6 @@ export default function ExperienceCard({
           </div>
         </div>
       </div>
-    </li>
+    </Card>
   );
 }

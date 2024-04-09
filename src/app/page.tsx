@@ -21,9 +21,9 @@ export default function HomePage() {
         <div className="w-full space-y-8">
           <div className="flex flex-col justify-center">
             <h1 className="mb-4 text-lg font-semibold">Work Experience 👨🏼‍💻</h1>
-            <Card className="flex justify-center px-6 py-2">
+            <div className="flex justify-center">
               <WorkExperience />
-            </Card>
+            </div>
           </div>
           <div className="flex flex-col justify-center">
             <h1 className="mb-4 text-lg font-semibold">Skills 🛠️</h1>
