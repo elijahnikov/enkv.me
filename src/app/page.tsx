@@ -5,7 +5,6 @@ import WorkExperience from "@/components/common/home-page/experience/work-experi
 import ProfileHeader from "@/components/common/home-page/profile-header";
 
 import Stacks from "@/components/common/home-page/stacks";
-import Island from "@/components/common/island/island";
 import { Card } from "@/components/ui/card";
 
 export default function HomePage() {

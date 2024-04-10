@@ -42,7 +42,7 @@ export function ReadMore({
   if (isDesktop) {
     return (
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogTrigger asChild>
+        <DialogTrigger>
           <div className="mb-1 mt-2 cursor-pointer text-xs text-neutral-500 underline">
             Read more
           </div>
@@ -73,11 +73,11 @@ export function ReadMore({
   return (
     <Drawer open={open} onOpenChange={setOpen}>
       <DrawerTrigger asChild>
-        <div className="mb-1 mt-2 cursor-pointer text-sm underline">
+        <div className="mb-1 mt-2 cursor-pointer text-xs text-neutral-500 underline">
           Read more
         </div>
       </DrawerTrigger>
-      <DrawerContent className="w-[100vw">
+      <DrawerContent className="w-[100vw]">
         <DrawerHeader className="text-left">
           <DrawerTitle>{title}</DrawerTitle>
           <DrawerDescription>{company}</DrawerDescription>
