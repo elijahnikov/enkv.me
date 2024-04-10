@@ -19,7 +19,9 @@ export default function HomePage() {
       <div className="xl:mx-none mx-auto flex max-w-[720px] justify-center xl:relative xl:left-[18vw] xl:block xl:w-[720px] xl:max-w-[720px]">
         <div className="w-full space-y-8">
           <div className="flex flex-col justify-center">
-            <h1 className="mb-4 text-lg font-semibold">Work Experience 👨🏼‍💻</h1>
+            <h1 className="mb-4 mt-4 text-lg font-semibold">
+              Work Experience 👨🏼‍💻
+            </h1>
             <div className="flex justify-center">
               <WorkExperience />
             </div>
