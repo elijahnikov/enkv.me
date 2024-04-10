@@ -55,7 +55,7 @@ export function ReadMore({
               <div>{location}</div>
             </DialogDescription>
           </DialogHeader>
-          <div className="mb-2 space-y-2">
+          <div className="mb-2 space-y-8">
             {pointers.map((pointers, index) => (
               <p
                 className="mt-1 text-sm text-neutral-700 dark:text-neutral-400"
@@ -82,7 +82,7 @@ export function ReadMore({
           <DrawerTitle>{title}</DrawerTitle>
           <DrawerDescription>{company}</DrawerDescription>
         </DrawerHeader>
-        <div className="mb-2 space-y-2 px-4 outline-none outline-0 ring-0">
+        <div className="mb-2 space-y-8 px-4 outline-none outline-0 ring-0">
           {pointers.map((pointers, index) => (
             <p
               className="mt-1 text-sm text-neutral-700 dark:text-neutral-400"
