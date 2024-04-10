@@ -10,7 +10,7 @@ import { Card } from "@/components/ui/card";
 export default function HomePage() {
   return (
     <main className="mx-auto w-full space-y-6 xl:flex  ">
-      <div className="left-0 mx-auto flex w-[400px] flex-col justify-center xl:fixed xl:block xl:w-[600px]">
+      <div className="left-0 mx-auto flex  flex-col justify-center xl:fixed xl:block xl:w-[600px]">
         <div className="xl:pl-16">
           <ProfileHeader />
         </div>

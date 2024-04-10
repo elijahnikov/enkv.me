@@ -18,11 +18,11 @@ export default function EmailButton() {
             href="mailto:enkv@pm.me"
             className={cn(
               buttonVariants({ variant: "secondary" }),
-              "flex h-8 items-center rounded-lg border border-neutral-200 px-2 text-xs shadow-sm dark:border-neutral-700",
+              "flex h-8 w-max items-center rounded-lg border border-neutral-200 text-xs shadow-sm dark:border-neutral-700",
             )}
           >
             <Mail size={16} className="mr-1" />
-            Contact me
+            <p>Contact me</p>
             <span className="relative ml-1 flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
               <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
