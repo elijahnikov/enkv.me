@@ -1,6 +1,7 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 
 import { BsLinkedin } from "react-icons/bs";
@@ -24,13 +25,16 @@ export default function LinkedinCard() {
       </div>
       <div className="flex w-full">
         <div>
-          <Button
-            size={"sm"}
-            variant={"secondary"}
-            className="mt-6 h-8 rounded-lg"
+          <Link
+            href="https://linkedin.com/in/enkv"
+            target="_blank"
+            className={cn(
+              buttonVariants({ size: "sm", variant: "secondary" }),
+              "mt-6 h-8 rounded-lg",
+            )}
           >
             Connect
-          </Button>
+          </Link>
         </div>
       </div>
     </div>
