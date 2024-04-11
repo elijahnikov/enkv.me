@@ -51,4 +51,9 @@ export const toolsMap: ToolsMapType[] = [
     name: "Soundcloud",
     src: "/tools/soundcloud.jpg",
   },
+  {
+    id: 11,
+    name: "layers.to",
+    src: "/tools/layers.png",
+  },
 ];

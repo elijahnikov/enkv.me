@@ -19,12 +19,12 @@ export default function Tools() {
           speed={70}
           gradientColor="#fafafa"
         >
-          <div className="flex h-[200px] items-center space-x-[70px]">
+          <div className="flex h-[200px] items-center space-x-[64px]">
             {toolsMap.map((tool) => (
               <div
                 key={tool.id}
                 className={cn(
-                  tool.id === 1 ? "pl-[70px]" : "",
+                  tool.id === 1 ? "pl-[64px]" : "",
                   "group flex flex-col items-center justify-center",
                 )}
               >
