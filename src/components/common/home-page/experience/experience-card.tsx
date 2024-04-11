@@ -1,10 +1,8 @@
 import { Badge } from "@/components/ui/badge";
 import { type ExperienceType } from "@/lib/experience";
 import { stacks } from "@/lib/stacks";
-import { Briefcase, ExternalLink, MapPin } from "lucide-react";
+import { ExternalLink, MapPin } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
-import Sticker from "../../sticker";
 import {
   Tooltip,
   TooltipContent,

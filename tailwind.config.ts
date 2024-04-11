@@ -60,7 +60,7 @@ const config = {
       },
       keyframes: {
         marquee: {
-          "0%": { transform: "translateX(0%)" },
+          "0%": { transform: "translateX(20%)" },
           "100%": { transform: "translateX(-100%)" },
         },
         marquee2: {
