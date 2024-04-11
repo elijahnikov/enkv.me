@@ -41,4 +41,14 @@ export const toolsMap: ToolsMapType[] = [
     name: "Twitter",
     src: "/tools/twitter.jpg",
   },
+  {
+    id: 9,
+    name: "Waze",
+    src: "/tools/waze.jpg",
+  },
+  {
+    id: 10,
+    name: "Soundcloud",
+    src: "/tools/soundcloud.jpg",
+  },
 ];
