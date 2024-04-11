@@ -28,7 +28,7 @@ export default function ProfileHeader() {
           />
         </div>
 
-        <div className="mt-4 w-full pl-0">
+        <div className="mt-4 w-full max-w-[90%] flex-col pl-0 sm:mx-auto sm:flex sm:max-w-[500px] sm:justify-center xl:max-w-full">
           <div className="flex items-center space-x-1">
             <h1 className="mt-4 text-[42px] font-bold">Elijah Posnikov</h1>
           </div>
