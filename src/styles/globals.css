@@ -83,6 +83,16 @@
     -webkit-backdrop-filter: blur(16px);
     backdrop-filter: blur(16px);
   }
+
+  .iconfade {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 47%,
+      rgba(254, 254, 255, 1) 81%,
+      rgba(0, 212, 255, 0) 100%
+    );
+  }
 }
 
 @layer base {

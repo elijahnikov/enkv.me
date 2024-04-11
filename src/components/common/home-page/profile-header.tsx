@@ -13,8 +13,8 @@ export default function ProfileHeader() {
   });
   const currentTimeInLondon = formatter.format(now);
   return (
-    <div>
-      <div>
+    <div className="left-0 mx-auto flex  flex-col justify-center xl:fixed xl:block xl:w-[600px]">
+      <div className="xl:pl-16">
         <div className="flex justify-center xl:block">
           <Image
             src={
