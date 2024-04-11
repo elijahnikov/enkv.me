@@ -2,9 +2,11 @@ import PageLayout from "@/components/common/layout/global-layout";
 import { cn } from "@/lib/utils";
 import "@/styles/globals.css";
 import { Analytics } from "@vercel/analytics/react";
+import { LogSnagProvider } from "@logsnag/next";
 
 import { Inter as FontSans } from "next/font/google";
 import Providers from "./providers";
+import { env } from "@/env";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -24,6 +26,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <LogSnagProvider
+          token={env.NEXT_PUBLIC_LOGSNAG_TOKEN}
+          project={env.NEXT_PUBLIC_LOGSNAG_PROJECT}
+        />
+      </head>
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",

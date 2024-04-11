@@ -1,14 +1,27 @@
 "use client";
 
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { cn } from "@/lib/utils";
+import { useLogSnag } from "@logsnag/next";
 import Link from "next/link";
 import GitHubCalendar from "react-github-calendar";
 import { BsGithub } from "react-icons/bs";
 
 export default function GithubCard() {
   const isDesktop = useMediaQuery("(min-width: 660px)");
+  const { track } = useLogSnag();
+  const trackGithubClick = () => {
+    track({
+      channel: "external-links",
+      event: "View social",
+      icon: "🌐",
+      notify: true,
+      tags: {
+        via: "github",
+      },
+    });
+  };
   return (
     <div className="flex justify-between overflow-hidden">
       <div>
@@ -17,6 +30,7 @@ export default function GithubCard() {
         </div>
         <div className="mt-4">
           <Link
+            onClick={trackGithubClick}
             className="flex items-center text-sm text-neutral-700 hover:underline"
             href={"https://github.com/elijahnikov"}
             target="_blank"
@@ -27,6 +41,7 @@ export default function GithubCard() {
         <div className="flex w-full">
           <div>
             <Link
+              onClick={trackGithubClick}
               href="https://github.com/elijahnikov"
               target="_blank"
               className={cn(

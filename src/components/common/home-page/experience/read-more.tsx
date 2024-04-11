@@ -7,8 +7,10 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
+  DialogClose,
   DialogContent,
   DialogDescription,
+  DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
@@ -24,6 +26,7 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
+import { useLogSnag } from "@logsnag/next";
 
 export function ReadMore({
   pointers,
@@ -36,13 +39,26 @@ export function ReadMore({
   title: string;
   location: string;
 }) {
+  const { track } = useLogSnag();
   const [open, setOpen] = React.useState(false);
   const isDesktop = useMediaQuery("(min-width: 768px)");
+
+  const trackReadMoreClick = () => {
+    track({
+      channel: "work-experience",
+      event: "Read more",
+      icon: "📖",
+      notify: true,
+      tags: {
+        company,
+      },
+    });
+  };
 
   if (isDesktop) {
     return (
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogTrigger>
+        <DialogTrigger onClick={trackReadMoreClick}>
           <div className="mb-1 mt-2 cursor-pointer text-xs text-neutral-500 underline">
             Read more
           </div>
@@ -65,6 +81,11 @@ export function ReadMore({
               </p>
             ))}
           </div>
+          <DialogFooter className="pt-2">
+            <DialogClose asChild className="w-full">
+              <Button variant="outline">Close</Button>
+            </DialogClose>
+          </DialogFooter>
         </DialogContent>
       </Dialog>
     );
@@ -72,7 +93,7 @@ export function ReadMore({
 
   return (
     <Drawer open={open} onOpenChange={setOpen}>
-      <DrawerTrigger asChild>
+      <DrawerTrigger asChild onClick={trackReadMoreClick}>
         <div className="mb-1 mt-2 cursor-pointer text-xs text-neutral-500 underline">
           Read more
         </div>
@@ -94,7 +115,7 @@ export function ReadMore({
         </div>
         <DrawerFooter className="pt-2">
           <DrawerClose asChild>
-            <Button variant="outline">Cancel</Button>
+            <Button variant="outline">Close</Button>
           </DrawerClose>
         </DrawerFooter>
       </DrawerContent>

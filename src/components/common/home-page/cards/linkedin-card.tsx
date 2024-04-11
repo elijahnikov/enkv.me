@@ -1,12 +1,25 @@
 "use client";
 
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { useLogSnag } from "@logsnag/next";
 import Link from "next/link";
 
 import { BsLinkedin } from "react-icons/bs";
 
 export default function LinkedinCard() {
+  const { track } = useLogSnag();
+  const trackLinkedinClick = () => {
+    track({
+      channel: "external-links",
+      event: "View social",
+      icon: "🌐",
+      notify: true,
+      tags: {
+        via: "linkedin",
+      },
+    });
+  };
   return (
     <div className="flex flex-col justify-between">
       <div>
@@ -15,6 +28,7 @@ export default function LinkedinCard() {
         </div>
         <div className="mt-4">
           <Link
+            onClick={trackLinkedinClick}
             className="flex items-center text-sm text-neutral-700 hover:underline"
             href={"https://linkedin.com/in/enkv"}
             target="_blank"
@@ -26,6 +40,7 @@ export default function LinkedinCard() {
       <div className="flex w-full">
         <div>
           <Link
+            onClick={trackLinkedinClick}
             href="https://linkedin.com/in/enkv"
             target="_blank"
             className={cn(

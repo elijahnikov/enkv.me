@@ -6,15 +6,28 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
+import { useLogSnag } from "@logsnag/next";
 import { Mail } from "lucide-react";
 import Link from "next/link";
 
 export default function EmailButton() {
+  const { track } = useLogSnag();
   return (
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger asChild>
           <Link
+            onClick={() =>
+              track({
+                channel: "external-links",
+                event: "Contact via e-mail",
+                icon: "📩",
+                notify: true,
+                tags: {
+                  via: "email",
+                },
+              })
+            }
             href="mailto:enkv@pm.me"
             className={cn(
               buttonVariants({ variant: "secondary" }),

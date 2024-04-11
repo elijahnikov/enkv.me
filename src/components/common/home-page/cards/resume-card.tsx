@@ -2,10 +2,23 @@
 
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { useLogSnag } from "@logsnag/next";
 import { Download, ScrollText } from "lucide-react";
 import Link from "next/link";
 
 export default function ResumeCard() {
+  const { track } = useLogSnag();
+  const trackResumeClick = () => {
+    track({
+      channel: "external-links",
+      event: "View resume",
+      icon: "🧾",
+      notify: true,
+      tags: {
+        via: "resume",
+      },
+    });
+  };
   return (
     <div className="flex flex-col justify-between">
       <div>
@@ -14,6 +27,7 @@ export default function ResumeCard() {
         </div>
         <div className="mt-4">
           <Link
+            onClick={trackResumeClick}
             className="flex items-center text-sm text-neutral-700 hover:underline"
             href={"https://linkedin.com/in/enkv"}
             target="_blank"
@@ -25,6 +39,7 @@ export default function ResumeCard() {
       <div className="flex w-full">
         <div>
           <Link
+            onClick={trackResumeClick}
             href={
               "https://utfs.io/f/1550ba9a-3c75-46ae-9e10-169d7951d4d0-lfymu7.pdf"
             }
