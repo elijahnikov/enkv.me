@@ -11,12 +11,13 @@ export default function Tools() {
   return (
     <div className="flex flex-col justify-center">
       <h1 className="mb-4 text-lg font-semibold">Apps I like using 🔬</h1>
-      <div className="relative  h-[140px] w-full overflow-hidden bg-white">
+      <div className="relative h-[140px] w-full overflow-hidden">
         <Marquee
           gradient
           gradientWidth={isDesktop ? 200 : 100}
           className="-mt-8"
           speed={70}
+          gradientColor="#fafafa"
         >
           <div className="flex h-[200px] items-center space-x-[70px]">
             {toolsMap.map((tool) => (
