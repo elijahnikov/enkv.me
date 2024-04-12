@@ -14,7 +14,7 @@ const fontSans = FontSans({
 });
 
 export const metadata = {
-  title: "Elijah Posnikov",
+  title: "Elijah Posnikov - Software Developer",
   description: "Portfolio for Elijah Posnikov",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
