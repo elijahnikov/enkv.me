@@ -1,9 +1,23 @@
-import { Clock, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import EmailButton from "../island/email-button";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu";
+import { useLogSnag } from "@logsnag/next";
+import Navigation from "./navigation";
 
 export default function ProfileHeader() {
+  const pathname = usePathname();
+  const { track } = useLogSnag();
+
   const now = new Date();
   const formatter = new Intl.DateTimeFormat("en-US", {
     timeZone: "Europe/London",
@@ -12,6 +26,20 @@ export default function ProfileHeader() {
     minute: "numeric",
   });
   const currentTimeInLondon = formatter.format(now);
+
+  const links = [
+    {
+      id: 1,
+      href: "/",
+      name: "Home",
+    },
+    {
+      id: 2,
+      href: "/projects",
+      name: "Projects",
+    },
+  ];
+
   return (
     <div className="left-0 mx-auto flex  flex-col justify-center xl:fixed xl:block xl:w-[600px]">
       <div className="xl:pl-16">
@@ -27,7 +55,6 @@ export default function ProfileHeader() {
             height={200}
           />
         </div>
-
         <div className="mt-4 w-full max-w-[90%] flex-col pl-0 sm:mx-auto sm:flex sm:max-w-[500px] sm:justify-center xl:max-w-full">
           <div className="flex items-center space-x-1">
             <h1 className="mt-4 text-[42px] font-bold">Elijah Posnikov</h1>
@@ -49,6 +76,7 @@ export default function ProfileHeader() {
             <EmailButton />
           </div>
         </div>
+        <Navigation />
       </div>
     </div>
   );
