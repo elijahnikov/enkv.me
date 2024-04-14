@@ -55,7 +55,7 @@ export default function ProfileHeader() {
             height={200}
           />
         </div>
-        <div className="mt-4 w-full max-w-[90%] flex-col pl-0 sm:mx-auto sm:flex sm:max-w-[500px] sm:justify-center xl:max-w-full">
+        <div className="mt-4 w-full flex-col pl-0 sm:mx-auto sm:flex sm:max-w-[500px] sm:justify-center xl:max-w-full">
           <div className="flex items-center space-x-1">
             <h1 className="mt-4 text-[42px] font-bold">Elijah Posnikov</h1>
           </div>
