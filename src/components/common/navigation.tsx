@@ -18,7 +18,7 @@ export default function Navigation() {
   ];
   return (
     <div className="mt-8 w-full">
-      <nav className="relative z-0 mx-auto flex w-full justify-center  justify-around text-center text-sm sm:w-[500px] xl:mx-0 xl:w-[350px] xl:justify-start">
+      <nav className="relative z-0 mx-auto flex w-full justify-center justify-around rounded-md border border-neutral-200 bg-neutral-100 text-center text-sm sm:w-[500px] xl:mx-0 xl:w-[350px] xl:justify-start">
         {nav.map((n, index) => (
           <Link
             key={index}

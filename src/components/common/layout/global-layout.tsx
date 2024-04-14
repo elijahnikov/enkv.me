@@ -1,8 +1,8 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import ProfileHeader from "../home-page/profile-header";
-import Container from "../home-page/container";
+import ProfileHeader from "../profile-header";
+import Container from "../container";
 
 export default function PageLayout({
   children,

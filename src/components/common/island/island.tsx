@@ -1,5 +1,5 @@
 import { Separator } from "@/components/ui/separator";
-import HeaderLinks from "../home-page/header-links";
+import HeaderLinks from "../header-links";
 import EmailButton from "./email-button";
 
 export default function Island() {

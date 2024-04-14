@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import EmailButton from "../island/email-button";
+import EmailButton from "./island/email-button";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
