@@ -10,7 +10,7 @@ import Tools from "@/components/common/tools/tools";
 
 export default function HomePage() {
   return (
-    <>
+    <div className="space-y-8">
       <WorkExperience />
       <Stacks />
       <SayHello>
@@ -19,6 +19,6 @@ export default function HomePage() {
         <ResumeCard />
       </SayHello>
       <Tools />
-    </>
+    </div>
   );
 }
