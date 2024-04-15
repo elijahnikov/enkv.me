@@ -37,7 +37,7 @@ export default function SingleProject({ project }: { project: ProjectsType }) {
           }}
           className="mt-4 flex items-center space-x-2"
         >
-          <Badge>WIP</Badge>
+          {project.wip && <Badge>WIP</Badge>}
           <Link
             href={project.github_url}
             className={cn(buttonVariants({ size: "icon" }), "h-6 w-6")}

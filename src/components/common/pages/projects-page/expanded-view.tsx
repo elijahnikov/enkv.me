@@ -2,9 +2,11 @@ import { useProjectView } from "@/context/projectView";
 import { projects } from "@/lib/data/projects";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
+import SingleProjectExpanded from "./single-project-expanded";
 
 export default function ExpandedView() {
   const { selectedId, setSelectedId } = useProjectView();
+  const project = projects.find((p) => p.id === parseInt(String(selectedId)));
   return (
     <AnimatePresence>
       {selectedId && (
@@ -23,7 +25,7 @@ export default function ExpandedView() {
               className="relative bottom-0 left-0 right-0 top-0 z-10 m-auto h-max w-[85vw] rounded-lg border border-neutral-200 bg-white"
               layoutId={selectedId}
             >
-              <h1>hello</h1>
+              {project && <SingleProjectExpanded project={project} />}
             </motion.div>
           </motion.div>
         </>
