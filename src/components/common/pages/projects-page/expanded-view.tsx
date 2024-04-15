@@ -3,10 +3,15 @@ import { projects } from "@/lib/data/projects";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import SingleProjectExpanded from "./single-project-expanded";
+import useKeyPress from "@/hooks/useKeyPress";
 
 export default function ExpandedView() {
   const { selectedId, setSelectedId } = useProjectView();
   const project = projects.find((p) => p.id === parseInt(String(selectedId)));
+
+  useKeyPress("Escape", () => {
+    setSelectedId(null);
+  });
   return (
     <AnimatePresence>
       {selectedId && (
