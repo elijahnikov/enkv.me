@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
-import { type ExperienceType } from "@/lib/experience";
-import { stacks } from "@/lib/stacks";
+import { type ExperienceType } from "@/lib/data/experience";
+import { stacks } from "@/lib/data/stacks";
 import { ExternalLink, MapPin } from "lucide-react";
 import Link from "next/link";
 import {

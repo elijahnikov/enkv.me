@@ -1,4 +1,4 @@
-import { experience } from "@/lib/experience";
+import { experience } from "@/lib/data/experience";
 import ExperienceCard from "./experience-card";
 
 export default function WorkExperience() {

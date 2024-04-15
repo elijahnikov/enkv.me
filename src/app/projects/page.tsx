@@ -1,5 +1,5 @@
-import Container from "@/components/common/container";
+import SelectedProjects from "@/components/common/pages/projects-page/selected-projects";
 
 export default function ProjectsPage() {
-  return <div>hello</div>;
+  return <SelectedProjects />;
 }

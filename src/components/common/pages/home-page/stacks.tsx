@@ -8,7 +8,7 @@ import {
   TooltipTrigger,
   TooltipContent,
 } from "@/components/ui/tooltip";
-import { stacks } from "@/lib/stacks";
+import { stacks } from "@/lib/data/stacks";
 import _ from "lodash";
 
 export default function Stacks() {

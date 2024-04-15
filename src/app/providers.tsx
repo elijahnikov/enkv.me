@@ -1,11 +1,11 @@
 "use client";
 
-import { ThemeProvider } from "next-themes";
+import { ProjectViewProvider } from "@/context/projectView";
 
 export default function Providers({ children }: { children: React.ReactNode }) {
   return (
     // <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-    children
+    <ProjectViewProvider>{children}</ProjectViewProvider>
     // </ThemeProvider>
   );
 }

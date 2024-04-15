@@ -1,7 +1,7 @@
 "use client";
 
 import { useMediaQuery } from "@/hooks/useMediaQuery";
-import { toolsMap } from "@/lib/tools";
+import { toolsMap } from "@/lib/data/tools";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
