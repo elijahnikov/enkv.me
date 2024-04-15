@@ -13,9 +13,9 @@ export default function SingleProjectExpanded({
   project: ProjectsType;
 }) {
   return (
-    <div className="w-full px-10 py-4">
+    <div className="w-full px-6 py-4 sm:px-10">
       {/* header */}
-      <div className="flex justify-between">
+      <div className="w-full justify-between md:flex">
         <div className="w-full">
           <div className="flex items-center">
             <h1 className="-mb-2 text-[48px] font-bold">{project.title}</h1>
@@ -25,8 +25,12 @@ export default function SingleProjectExpanded({
             {project.description}
           </p>
         </div>
-        <div className="flex justify-between">
-          <p className={cn("my-4 w-[80%] text-sm text-neutral-700")}>
+        <div className="flex justify-end">
+          <p
+            className={cn(
+              "my-4 text-sm text-neutral-700 md:w-[90%] xl:w-[80%]",
+            )}
+          >
             {project.verbose_description}
           </p>
         </div>
@@ -36,7 +40,7 @@ export default function SingleProjectExpanded({
         {project.images?.map((imgs) => (
           <div key={imgs.id}>
             <div className="flex w-full justify-center" key={imgs.id}>
-              <div className="w-[80%]">
+              <div className="lg:w-[80%]">
                 <div className="flex items-center">
                   <div className="flex">
                     <Badge className="p- w-4 items-center justify-center rounded-full bg-neutral-900 text-white">
@@ -69,7 +73,7 @@ export default function SingleProjectExpanded({
         onClick={(e) => {
           e.stopPropagation();
         }}
-        className="mx-auto mb-[50px] mt-[100px] flex w-[80%] space-x-2"
+        className="mx-auto mb-[10px] mt-[100px] flex space-x-2 lg:w-[80%]"
       >
         <Link
           href={project.github_url}

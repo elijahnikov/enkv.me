@@ -16,9 +16,9 @@ export default function SingleProject({ project }: { project: ProjectsType }) {
       layoutId={String(project.id)}
       onClick={() => setSelectedId(String(project.id))}
       key={project.id}
-      className="group"
+      className="group cursor-pointer"
     >
-      <div className="flex items-center justify-between">
+      <div className="block items-center justify-between sm:flex">
         <div>
           <div className="flex items-center">
             <h1 className="-mb-1 font-bold text-neutral-700">
@@ -35,7 +35,7 @@ export default function SingleProject({ project }: { project: ProjectsType }) {
           onClick={(e) => {
             e.stopPropagation();
           }}
-          className="mt-4 flex items-center space-x-2"
+          className="mt-2 flex items-center space-x-2 sm:mt-4"
         >
           {project.wip && <Badge>WIP</Badge>}
           <Link
@@ -54,7 +54,7 @@ export default function SingleProject({ project }: { project: ProjectsType }) {
           </Link>
         </div>
       </div>
-      <div className="relative h-max w-max">
+      <div className="relative h-max w-[90vw] sm:w-full xl:w-max">
         <div className="absolute z-10 flex h-full w-full items-center justify-center rounded-xl bg-white opacity-0 transition-opacity duration-300 group-hover:opacity-30" />
         <div className="absolute z-10 flex h-full w-full items-center justify-center rounded-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100">
           <div className="text-center">
@@ -67,9 +67,11 @@ export default function SingleProject({ project }: { project: ProjectsType }) {
         <Image
           src={project.header_image}
           alt={`Desktop image of ${project.title} app`}
-          width={720}
-          height={720}
-          className="animate mt-4 rounded-xl border bg-neutral-800"
+          width={0}
+          height={0}
+          sizes="100vw"
+          style={{ width: "100%", height: "auto" }}
+          className="animate mt-4 rounded-xl bg-neutral-800"
         />
       </div>
     </motion.div>
