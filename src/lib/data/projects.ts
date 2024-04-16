@@ -14,6 +14,7 @@ export type ProjectsType = {
     title: string;
     label: string;
   }>;
+  stack: Array<string>;
 };
 
 export const projects: ProjectsType[] = [
@@ -58,6 +59,18 @@ export const projects: ProjectsType[] = [
         label:
           "Analytics for gridl moodboards, showing clicks over time and where said links occurred.",
       },
+    ],
+    stack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Prisma",
+      "Supabase",
+      "PostgreSQL",
+      "Vercel",
+      "Upstash",
+      "tRPC",
+      "Tailwind",
     ],
   },
   {
@@ -106,6 +119,17 @@ export const projects: ProjectsType[] = [
         label: "View reviews for movies, leave your thoughts and drop a like.",
       },
     ],
+    stack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Planetscale",
+      "tRPC",
+      "Vercel",
+      "Upstash",
+      "PostgreSQL",
+      "Tailwind",
+    ],
   },
   {
     id: 3,
@@ -129,5 +153,6 @@ export const projects: ProjectsType[] = [
           "A demo website showing off the functionality and capabilties of the gradient picker. Copy the CSS string or download an image of the color you have generated.",
       },
     ],
+    stack: ["React", "TypeScript"],
   },
 ];
