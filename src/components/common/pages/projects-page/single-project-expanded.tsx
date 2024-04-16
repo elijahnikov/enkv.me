@@ -7,7 +7,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { type ProjectsType } from "@/lib/data/projects";
-import { flattenedStacks, stacks } from "@/lib/data/stacks";
+import { flattenedStacks } from "@/lib/data/stacks";
 import { cn } from "@/lib/utils";
 import { ExternalLink } from "lucide-react";
 import Image from "next/image";

@@ -14,6 +14,7 @@ export default function SelectedProjects() {
           {projects.map((project) => (
             <ProjectContainer
               key={project.id}
+              title={project.title}
               trigger={<SingleProject project={project} />}
               view={<SingleProjectExpanded project={project} />}
             />

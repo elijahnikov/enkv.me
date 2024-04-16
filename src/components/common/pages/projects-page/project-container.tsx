@@ -20,8 +20,10 @@ import { useState } from "react";
 export default function ProjectContainer({
   trigger,
   view,
+  title,
 }: {
   trigger: React.ReactNode;
+  title: string;
   view: React.ReactNode;
 }) {
   const { track } = useLogSnag();
@@ -29,12 +31,15 @@ export default function ProjectContainer({
   const [open, setOpen] = useState<boolean>(false);
 
   const trackReadMoreClick = () => {
-    // track({
-    //   channel: "work-experience",
-    //   event: "Read more",
-    //   icon: "📖",
-    //   notify: true,
-    // });
+    track({
+      channel: "projects",
+      event: "Opened project",
+      icon: "💡",
+      notify: true,
+      tags: {
+        title,
+      },
+    });
   };
 
   if (isDesktop) {
