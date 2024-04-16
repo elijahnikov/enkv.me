@@ -5,6 +5,7 @@ export type ProjectsType = {
   verbose_description: string;
   header_image: string;
   wip?: boolean;
+  active?: boolean;
   github_url: string;
   url: string;
   images?: Array<{
@@ -19,6 +20,7 @@ export const projects: ProjectsType[] = [
   {
     id: 1,
     title: "Gridl",
+    active: true,
     description: "Your very own social moodboard in one link in bio.",
     verbose_description:
       "Gridl is a personalised social moodboard platform, all conveniently accessible through a single link in your bio. With Gridl, you can curate and showcase your favorite content, inspirations, and interests in a visually captivating way. Create moodboards that reflect your unique style, passions, and personality, and share them effortlessly with your followers, friends, and colleagues. Whether you're an artist, designer, influencer, or simply someone who loves to express themselves creatively, Gridl empowers you to craft a stunning online presence that truly represents you.",
@@ -55,6 +57,76 @@ export const projects: ProjectsType[] = [
         title: "Analytics",
         label:
           "Analytics for gridl moodboards, showing clicks over time and where said links occurred.",
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Crumble",
+    description: "A social media network for film lovers.",
+    verbose_description: `Crumble, a social network designed for movie enthusiasts, inspired by the popular platform Letterboxd. Discover a vast collection of films, engage in lively discussions, and share your interest in movies and TV with like-minded individuals.
+        Explore diverse genres, rate and review movies, and curate personalised watchlists to keep track of your favorites. Users can connect with a passionate community, exchange recommendations, and stay updated on the latest industry news and releases.`,
+    github_url: "https://github.com/elijahnikov/crumble",
+    header_image:
+      "https://utfs.io/f/519766d9-1c87-4f05-ac64-29365bf0f4e5-aepobw.png",
+    url: "https://crumble-sigma.vercel.app",
+    wip: true,
+    images: [
+      {
+        id: 1,
+        src: "https://utfs.io/f/fd2ba7dd-69bf-4daf-9303-dd850aae7b61-p71pcg.png",
+        title: "Profile",
+        label:
+          "User's profile page, showing off their stats and a brief overview of their profile.",
+      },
+      {
+        id: 2,
+        src: "https://utfs.io/f/7a989102-8f59-4cd8-be5a-e7af0f26ec49-clm9z7.png",
+        title: "Movie",
+        label: `View movie stats. Movie page for "Dune - Part Two", showing information, cast and popular reviews.`,
+      },
+      {
+        id: 3,
+        src: "https://utfs.io/f/461eb725-23e4-46bb-b318-c716b2c5c4f2-clifvt.png",
+        title: "Lists",
+        label:
+          "Create lists with your favourite movies. Lists page where users can discover lists created by other users.",
+      },
+      {
+        id: 4,
+        src: "https://utfs.io/f/03ec1087-d0ae-4aee-81f0-548db32a7629-8tgoa8.png",
+        title: "Create reviews",
+        label:
+          "Create reviews for movies you have watched, share your thoughts, rate what you've watched and keep a log.",
+      },
+      {
+        id: 5,
+        src: "https://utfs.io/f/490ddfe6-4b80-41ba-a1de-9549d0e35023-s80cxb.png",
+        title: "Review",
+        label: "View reviews for movies, leave your thoughts and drop a like.",
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: "Gradiently",
+    description:
+      "A minimal, lightweight colour picker to generate beautiful colours and gradients.",
+    verbose_description:
+      "A minimal, lightweight NPM package built with React and TypeScript to allow users to add a gradient/color picker into their React apps.",
+    github_url: "",
+    header_image:
+      "https://utfs.io/f/247bed5e-4e6d-43e0-b4d6-d9f267b02d80-qr6rvh.png",
+    url: "https://gradiently-demo.vercel.app/",
+    active: true,
+    wip: false,
+    images: [
+      {
+        id: 1,
+        src: "https://utfs.io/f/5f1a8fd2-c5fb-4d4b-8426-c1557266bd81-blrrvx.png",
+        title: "Demo page",
+        label:
+          "A demo website showing off the functionality and capabilties of the gradient picker. Copy the CSS string or download an image of the color you have generated.",
       },
     ],
   },

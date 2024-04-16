@@ -18,10 +18,10 @@ export default function SingleProjectExpanded({
       <div className="w-full justify-between md:flex">
         <div className="w-full">
           <div className="flex items-center">
-            <h1 className="-mb-2 text-[48px] font-bold">{project.title}</h1>
-            <div>{project.wip && <Badge className="ml-2 mt-6">WIP</Badge>}</div>
+            <h1 className="-mb-2 text-[36px] font-bold">{project.title}</h1>
+            <div>{project.wip && <Badge className="ml-2 mt-4">WIP</Badge>}</div>
           </div>
-          <p className="text-md w-[75%] text-neutral-600">
+          <p className="text-md w-[75%] max-w-[300px] text-neutral-600">
             {project.description}
           </p>
         </div>

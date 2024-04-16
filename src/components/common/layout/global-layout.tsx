@@ -3,7 +3,6 @@
 import { cn } from "@/lib/utils";
 import ProfileHeader from "../profile-header";
 import Container from "../container";
-import ExpandedView from "../pages/projects-page/expanded-view";
 
 export default function PageLayout({
   children,
@@ -19,7 +18,6 @@ export default function PageLayout({
               <main className="mx-auto w-full space-y-6 xl:flex">
                 <ProfileHeader />
                 <Container>{children}</Container>
-                <ExpandedView />
               </main>
               <div className="h-20" />
             </div>

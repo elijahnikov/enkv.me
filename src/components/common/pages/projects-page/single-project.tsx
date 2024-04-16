@@ -1,33 +1,27 @@
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
-import { useProjectView } from "@/context/projectView";
 import { type ProjectsType } from "@/lib/data/projects";
 import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
 import { ExternalLink, Eye } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { BsGithub } from "react-icons/bs";
 
 export default function SingleProject({ project }: { project: ProjectsType }) {
-  const { setSelectedId } = useProjectView();
   return (
-    <motion.div
-      layoutId={String(project.id)}
-      onClick={() => setSelectedId(String(project.id))}
-      key={project.id}
-      className="group cursor-pointer"
-    >
+    <div key={project.id} className="group cursor-pointer">
       <div className="block items-center justify-between sm:flex">
         <div>
           <div className="flex items-center">
             <h1 className="-mb-1 font-bold text-neutral-700">
               {project.title}
             </h1>
-            <span className="relative ml-1 mt-1 flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
-            </span>
+            {project.active && (
+              <span className="relative ml-1 mt-1 flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
+              </span>
+            )}
           </div>
           <p className="text-sm text-neutral-600">{project.description}</p>
         </div>
@@ -71,9 +65,9 @@ export default function SingleProject({ project }: { project: ProjectsType }) {
           height={0}
           sizes="100vw"
           style={{ width: "100%", height: "auto" }}
-          className="animate mt-4 rounded-xl bg-neutral-800"
+          className="animate mt-4 rounded-xl border border-neutral-200 bg-white shadow-sm"
         />
       </div>
-    </motion.div>
+    </div>
   );
 }
