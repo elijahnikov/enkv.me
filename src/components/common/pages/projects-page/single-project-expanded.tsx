@@ -13,7 +13,7 @@ export default function SingleProjectExpanded({
   project: ProjectsType;
 }) {
   return (
-    <div className="w-full px-6 py-4 sm:px-10">
+    <div className="max-h-[600px] w-full overflow-y-auto px-6 py-4 sm:px-10 md:max-h-full">
       {/* header */}
       <div className="w-full justify-between md:flex">
         <div className="w-full">

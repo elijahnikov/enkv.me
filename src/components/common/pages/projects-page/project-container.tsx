@@ -45,11 +45,6 @@ export default function ProjectContainer({
         </DialogTrigger>
         <DialogContent className="max-h-[90vh] min-w-[90vw] overflow-y-auto">
           <div className="mb-2 space-y-8">{view}</div>
-          <DialogFooter className="pt-2">
-            <DialogClose asChild className="w-full">
-              <Button variant="outline">Close</Button>
-            </DialogClose>
-          </DialogFooter>
         </DialogContent>
       </Dialog>
     );
@@ -60,15 +55,10 @@ export default function ProjectContainer({
       <DrawerTrigger asChild onClick={trackReadMoreClick}>
         <div>{trigger}</div>
       </DrawerTrigger>
-      <DrawerContent className="w-[100vw]">
+      <DrawerContent className="">
         <div className="mb-2 space-y-8 px-4 outline-none outline-0 ring-0">
           {view}
         </div>
-        <DrawerFooter className="pt-2">
-          <DrawerClose asChild>
-            <Button variant="outline">Close</Button>
-          </DrawerClose>
-        </DrawerFooter>
       </DrawerContent>
     </Drawer>
   );
