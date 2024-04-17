@@ -6,8 +6,11 @@ import { ExternalLink, Eye } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { BsGithub } from "react-icons/bs";
+import { useState } from "react";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export default function SingleProject({ project }: { project: ProjectsType }) {
+  const [imageLoaded, setImageLoaded] = useState<boolean>(false);
   return (
     <div key={project.id} className="group cursor-pointer">
       <div className="block items-center justify-between sm:flex">
@@ -58,15 +61,24 @@ export default function SingleProject({ project }: { project: ProjectsType }) {
             />
           </div>
         </div>
-        <Image
-          src={project.header_image}
-          alt={`Desktop image of ${project.title} app`}
-          width={0}
-          height={0}
-          sizes="100vw"
-          style={{ width: "100%", height: "auto" }}
-          className="animate mt-4 rounded-xl border border-neutral-200 bg-white shadow-sm"
-        />
+        <div>
+          {!imageLoaded && (
+            <Skeleton className="absolute h-[425px] w-full bg-neutral-200" />
+          )}
+          <Image
+            src={project.header_image}
+            alt={`Desktop image of ${project.title} app`}
+            width={0}
+            height={0}
+            onLoad={() => setImageLoaded(true)}
+            sizes="100vw"
+            style={{ width: "100%", height: "auto" }}
+            className={cn(
+              !imageLoaded ? "opacity-0" : "opacity-100",
+              "animate mt-4 rounded-xl border border-neutral-200 bg-white shadow-sm",
+            )}
+          />
+        </div>
       </div>
     </div>
   );

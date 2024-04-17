@@ -1,18 +1,5 @@
-import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogClose,
-  DialogContent,
-  DialogFooter,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerFooter,
-  DrawerTrigger,
-} from "@/components/ui/drawer";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { useLogSnag } from "@logsnag/next";
 import { useState } from "react";
@@ -31,15 +18,15 @@ export default function ProjectContainer({
   const [open, setOpen] = useState<boolean>(false);
 
   const trackReadMoreClick = () => {
-    // track({
-    //   channel: "projects",
-    //   event: "Opened project",
-    //   icon: "💡",
-    //   notify: true,
-    //   tags: {
-    //     title,
-    //   },
-    // });
+    track({
+      channel: "projects",
+      event: "Opened project",
+      icon: "💡",
+      notify: true,
+      tags: {
+        title,
+      },
+    });
   };
 
   if (isDesktop) {
