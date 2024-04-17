@@ -45,34 +45,19 @@ export default function SingleProjectExpanded({
       <div className="mx-auto mt-5 flex max-w-[550px] flex-col flex-wrap justify-center text-left md:max-w-max">
         <p className="text-sm font-semibold">Technology used</p>
         <div className="flex w-full flex-wrap justify-center">
-          <TooltipProvider>
-            {project.stack.map((stk, index) => {
-              const src = flattenedStacks[stk];
-              return (
-                <div key={index}>
-                  <Tooltip>
-                    <TooltipTrigger>
-                      <svg
-                        viewBox="0 0 128 128"
-                        className="absolute z-10 h-[50px] max-h-[50px] w-[50px] max-w-[50px] overflow-visible p-2"
-                      >
-                        {src}
-                      </svg>
-                      <svg
-                        viewBox="0 0 128 128"
-                        className="sticker h-[50px] max-h-[50px] w-[50px] max-w-[50px] overflow-visible p-2 drop-shadow-[rgba(0,_0,_0,_0.24)_0px_0.5px_1px]"
-                      >
-                        {src}
-                      </svg>
-                    </TooltipTrigger>
-                    <TooltipContent className="relative left-0 border-neutral-200 text-xs dark:border-neutral-800">
-                      {stk}
-                    </TooltipContent>
-                  </Tooltip>
-                </div>
-              );
-            })}
-          </TooltipProvider>
+          {project.stack.map((stk, index) => {
+            const src = flattenedStacks[stk];
+            return (
+              <div key={index}>
+                <svg
+                  viewBox="0 0 128 128"
+                  className="z-10 h-[50px] max-h-[50px] w-[50px] max-w-[50px] overflow-visible p-2"
+                >
+                  {src}
+                </svg>
+              </div>
+            );
+          })}
         </div>
       </div>
       {/* images */}

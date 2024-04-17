@@ -31,15 +31,15 @@ export default function ProjectContainer({
   const [open, setOpen] = useState<boolean>(false);
 
   const trackReadMoreClick = () => {
-    track({
-      channel: "projects",
-      event: "Opened project",
-      icon: "💡",
-      notify: true,
-      tags: {
-        title,
-      },
-    });
+    // track({
+    //   channel: "projects",
+    //   event: "Opened project",
+    //   icon: "💡",
+    //   notify: true,
+    //   tags: {
+    //     title,
+    //   },
+    // });
   };
 
   if (isDesktop) {

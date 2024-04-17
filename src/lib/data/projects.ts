@@ -135,10 +135,10 @@ export const projects: ProjectsType[] = [
     id: 3,
     title: "Gradiently",
     description:
-      "A minimal, lightweight colour picker to generate beautiful colours and gradients.",
+      "A minimal, lightweight NPM package colour picker to generate beautiful colours and gradients.",
     verbose_description:
       "A minimal, lightweight NPM package built with React and TypeScript to allow users to add a gradient/color picker into their React apps.",
-    github_url: "",
+    github_url: "https://github.com/elijahnikov/gradiently",
     header_image:
       "https://utfs.io/f/247bed5e-4e6d-43e0-b4d6-d9f267b02d80-qr6rvh.png",
     url: "https://gradiently-demo.vercel.app/",
@@ -152,7 +152,42 @@ export const projects: ProjectsType[] = [
         label:
           "A demo website showing off the functionality and capabilties of the gradient picker. Copy the CSS string or download an image of the color you have generated.",
       },
+      {
+        id: 2,
+        src: "https://utfs.io/f/1b4ee063-eebf-4257-bbe4-af7f44e56fe3-dp6i1f.png",
+        title: "Example of usage",
+        label:
+          "An example of me using the Gradiently NPM package in the Gridl app to allow users to set their moodboard background color/gradient.",
+      },
     ],
-    stack: ["React", "TypeScript"],
+    stack: ["React", "TypeScript", "Tailwind"],
+  },
+  {
+    id: 4,
+    title: "UI",
+    description:
+      "A lightweight UI library for React built with TypeScript and Radix primitives.",
+    header_image:
+      "https://utfs.io/f/7af57e03-968f-418b-98e9-46f3281a7651-azvhvw.png",
+    github_url: "https://github.com/elijahnikov/ui",
+    stack: ["React", "TypeScript", "Tailwind"],
+    url: "https://ui-sepia.vercel.app/button",
+    verbose_description: "",
+    active: true,
+    images: [
+      {
+        id: 1,
+        src: "https://utfs.io/f/5f321b43-bdb1-4993-a771-2d72d7837549-80sycp.png",
+        title: "Tab",
+        label: "Page showing the implementation of the Tab component.",
+      },
+      {
+        id: 2,
+        src: "https://utfs.io/f/0f1c16a7-4800-4675-899e-96fc9ca6ab79-whood1.png",
+        title: "Select",
+        label: "Page showing the implementation of the Select component.",
+      },
+    ],
+    wip: true,
   },
 ];
