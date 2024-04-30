@@ -16,7 +16,7 @@ export default function SingleProject({ project }: { project: ProjectsType }) {
       <div className="block items-center justify-between sm:flex">
         <div>
           <div className="flex items-center">
-            <h1 className="-mb-1 font-bold text-neutral-700">
+            <h1 className="-mb-1 font-bold text-neutral-700 dark:text-neutral-300">
               {project.title}
             </h1>
             {project.active && (
@@ -26,7 +26,9 @@ export default function SingleProject({ project }: { project: ProjectsType }) {
               </span>
             )}
           </div>
-          <p className="text-sm text-neutral-600">{project.description}</p>
+          <p className="text-sm text-neutral-600 dark:text-neutral-400">
+            {project.description}
+          </p>
         </div>
         <div
           onClick={(e) => {

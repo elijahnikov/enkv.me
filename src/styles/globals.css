@@ -99,11 +99,11 @@
   * {
     @apply border-border;
   }
-  body {
-    @apply bg-background text-foreground;
-  }
 
   html {
     @apply bg-[#fafafa];
+    &.dark {
+      @apply bg-[#141414];
+    }
   }
 }

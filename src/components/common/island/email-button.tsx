@@ -33,7 +33,7 @@ export default function EmailButton() {
             href="mailto:enkv@pm.me"
             className={cn(
               buttonVariants({ variant: "secondary" }),
-              "flex h-8 w-max items-center rounded-lg border border-neutral-200 bg-white text-xs shadow-sm",
+              "flex h-8 w-max items-center rounded-lg border border-neutral-200 bg-white text-xs shadow-sm dark:border-neutral-800 dark:bg-black dark:text-white",
             )}
           >
             <Mail size={16} className="mr-1" />

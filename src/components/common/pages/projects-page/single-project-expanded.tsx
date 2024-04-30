@@ -22,14 +22,14 @@ export default function SingleProjectExpanded({
             <h1 className="-mb-2 text-[36px] font-bold">{project.title}</h1>
             <div>{project.wip && <Badge className="ml-2 mt-4">WIP</Badge>}</div>
           </div>
-          <p className="text-md w-[75%] max-w-[300px] text-neutral-600">
+          <p className="text-md w-[75%] max-w-[300px] text-neutral-600 dark:text-neutral-300">
             {project.description}
           </p>
         </div>
         <div className="flex justify-end">
           <p
             className={cn(
-              "my-4 text-sm text-neutral-700 md:w-[90%] xl:w-[80%]",
+              "my-4 text-sm text-neutral-700 dark:text-neutral-300 md:w-[90%] xl:w-[80%]",
             )}
           >
             {project.verbose_description}
@@ -38,7 +38,7 @@ export default function SingleProjectExpanded({
       </div>
       <div className="mx-auto mt-5 flex max-w-[550px] flex-col flex-wrap justify-center text-left md:max-w-max">
         <p className="text-sm font-semibold">Technology used</p>
-        <div className="flex w-full flex-wrap justify-center">
+        <div className="flex w-full flex-wrap justify-center rounded-lg border bg-neutral-100 dark:border-neutral-700 dark:bg-neutral-200">
           {project.stack.map((stk, index) => {
             const src = flattenedStacks[stk];
             return (

@@ -1,23 +1,9 @@
 import Image from "next/image";
-import Link from "next/link";
 import EmailButton from "./island/email-button";
-import { buttonVariants } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import { usePathname } from "next/navigation";
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
-import { useLogSnag } from "@logsnag/next";
 import Navigation from "./navigation";
+import ThemeSwitcher from "./theme-switcher";
 
 export default function ProfileHeader() {
-  const pathname = usePathname();
-  const { track } = useLogSnag();
-
   const now = new Date();
   const formatter = new Intl.DateTimeFormat("en-US", {
     timeZone: "Europe/London",
@@ -26,19 +12,6 @@ export default function ProfileHeader() {
     minute: "numeric",
   });
   const currentTimeInLondon = formatter.format(now);
-
-  const links = [
-    {
-      id: 1,
-      href: "/",
-      name: "Home",
-    },
-    {
-      id: 2,
-      href: "/projects",
-      name: "Projects",
-    },
-  ];
 
   return (
     <div className="left-0 mx-auto flex  flex-col justify-center xl:fixed xl:block xl:w-[600px]">
@@ -59,21 +32,22 @@ export default function ProfileHeader() {
           <div className="flex items-center space-x-1">
             <h1 className="mt-4 text-[42px] font-bold">Elijah Posnikov</h1>
           </div>
-          <p className="text-md mt-2 w-[100%] text-neutral-700 dark:text-neutral-300/80 sm:text-[24px] xl:w-[80%]">
+          <p className="text-md mt-2 w-[100%] text-neutral-700 dark:text-neutral-200 sm:text-[24px] xl:w-[80%]">
             Software developer with a keen eye for detail and fueled by a
             passion for crafting delightful experiences that are inclusive and
             intuitive.
           </p>
-          <p className="mt-2 text-neutral-700">
+          <p className="mt-2 text-neutral-700 dark:text-neutral-300">
             Currently Software Developer at Airfinity
           </p>
           <div className="mt-2 flex">
-            <div className="items-center text-sm text-neutral-600">
+            <div className="items-center text-sm text-neutral-600 dark:text-neutral-300">
               <p>London, United Kingdom 🇬🇧 {currentTimeInLondon} 🕐</p>
             </div>
           </div>
-          <div className="mt-6 w-[30%]">
+          <div className="mt-6 flex w-max space-x-2">
             <EmailButton />
+            <ThemeSwitcher />
           </div>
         </div>
         <Navigation />

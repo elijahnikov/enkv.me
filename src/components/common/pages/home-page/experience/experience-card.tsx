@@ -77,7 +77,7 @@ export default function ExperienceCard({
                               </svg>
                               <svg
                                 viewBox="0 0 128 128"
-                                className="sticker h-[36px] max-h-[36px] w-[36px] max-w-[36px] overflow-visible p-2 drop-shadow-[rgba(0,_0,_0,_0.24)_0px_0.5px_1px]"
+                                className="sticker h-[36px] max-h-[36px] w-[36px] max-w-[36px] overflow-visible p-2 drop-shadow-[rgba(0,_0,_0,_0.24)_0px_0.5px_1px] dark:opacity-80"
                               >
                                 {src}
                               </svg>

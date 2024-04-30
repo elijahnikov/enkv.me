@@ -37,7 +37,7 @@ export default function GithubCard() {
               href={"https://github.com/elijahnikov"}
               target="_blank"
             >
-              <p>/elijahnikov</p>
+              <p className="dark:text-neutral-300">/elijahnikov</p>
             </Link>
           </div>
           <div className="flex w-full">

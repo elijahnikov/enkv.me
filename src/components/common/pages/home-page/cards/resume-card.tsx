@@ -34,7 +34,7 @@ export default function ResumeCard() {
               href={"https://linkedin.com/in/enkv"}
               target="_blank"
             >
-              <p>My resume</p>
+              <p className="dark:text-neutral-300">My resume</p>
             </Link>
           </div>
         </div>

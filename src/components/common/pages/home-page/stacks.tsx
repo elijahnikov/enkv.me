@@ -20,7 +20,7 @@ export default function Stacks() {
           {Object.entries(stacks).map(([category, items]) => (
             <Card className="p-4" key={category}>
               <div className="mb-2 flex items-center space-x-2">
-                <h2 className="text-sm font-semibold text-neutral-600 ">
+                <h2 className="text-sm font-semibold text-neutral-600 dark:text-neutral-300 ">
                   {_.startCase(_.toLower(category))}
                 </h2>
                 <Badge className="border border-green-500 bg-green-400 text-black shadow-sm hover:bg-green-400">
@@ -32,7 +32,7 @@ export default function Stacks() {
                   {Object.entries(items).map(([name, src], index) => (
                     <Tooltip key={index}>
                       <TooltipTrigger>
-                        <div className="flex items-center justify-center rounded-lg border border-neutral-200 px-2 shadow-sm">
+                        <div className="flex items-center justify-center rounded-lg border border-neutral-200 px-2 shadow-sm dark:border-neutral-800">
                           <div>
                             <svg
                               viewBox="0 0 128 128"

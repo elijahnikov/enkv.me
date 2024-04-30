@@ -55,8 +55,8 @@ export const stacks: StacksType = {
           y2="1151.089"
           gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)"
         >
-          <stop offset="0" stop-color="#5A9FD4"></stop>
-          <stop offset="1" stop-color="#306998"></stop>
+          <stop offset="0" stopColor="#5A9FD4"></stop>
+          <stop offset="1" stopColor="#306998"></stop>
         </linearGradient>
         <linearGradient
           id="python-original-b"
@@ -67,8 +67,8 @@ export const stacks: StacksType = {
           y2="1149.537"
           gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)"
         >
-          <stop offset="0" stop-color="#FFD43B"></stop>
-          <stop offset="1" stop-color="#FFE873"></stop>
+          <stop offset="0" stopColor="#FFD43B"></stop>
+          <stop offset="1" stopColor="#FFE873"></stop>
         </linearGradient>
         <path
           fill="url(#python-original-a)"
@@ -88,8 +88,8 @@ export const stacks: StacksType = {
           gradientTransform="matrix(0 -.24 -1.055 0 532.979 557.576)"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stop-color="#B8B8B8" stop-opacity=".498"></stop>
-          <stop offset="1" stop-color="#7F7F7F" stop-opacity="0"></stop>
+          <stop offset="0" stopColor="#B8B8B8" stopOpacity=".498"></stop>
+          <stop offset="1" stopColor="#7F7F7F" stopOpacity="0"></stop>
         </radialGradient>
         <path
           opacity=".444"
@@ -153,12 +153,12 @@ export const stacks: StacksType = {
         />
         <path
           fill="#fff"
-          fill-opacity="0.4"
+          fillOpacity="0.4"
           d="M256 42.415c-56.554-56.553-148.247-56.553-204.8 0c-56.555 56.555-56.555 148.247 0 204.801l25.599-25.6c-42.415-42.415-42.415-111.185 0-153.6c42.416-42.416 111.185-42.416 153.6 0z"
         />
         <path
           fill="#fff"
-          fill-opacity="0.4"
+          fillOpacity="0.4"
           d="M204.8 93.616c-28.276-28.277-74.124-28.277-102.4 0c-28.278 28.277-28.278 74.123 0 102.4l25.6-25.6c-14.14-14.138-14.14-37.061 0-51.2c14.138-14.139 37.06-14.139 51.2 0z"
         />
       </svg>
@@ -175,8 +175,8 @@ export const stacks: StacksType = {
             gradientTransform="translate(29.387 60.096) scale(1.1436)"
             gradientUnits="userSpaceOnUse"
           >
-            <stop offset="0" stop-color="#249361"></stop>
-            <stop offset="1" stop-color="#3ecf8e"></stop>
+            <stop offset="0" stopColor="#249361"></stop>
+            <stop offset="1" stopColor="#3ecf8e"></stop>
           </linearGradient>
           <linearGradient
             id="b"
@@ -188,7 +188,7 @@ export const stacks: StacksType = {
             gradientUnits="userSpaceOnUse"
           >
             <stop offset="0"></stop>
-            <stop offset="1" stop-opacity="0"></stop>
+            <stop offset="1" stopOpacity="0"></stop>
           </linearGradient>
         </defs>
         <path
@@ -198,7 +198,7 @@ export const stacks: StacksType = {
         ></path>
         <path
           fill="url(#b)"
-          fill-opacity=".2"
+          fillOpacity=".2"
           d="M102.24 186.21c-3.267 4.117-9.904 1.862-9.977-3.397l-1.156-76.906h51.715c9.365 0 14.587 10.817 8.763 18.149z"
           transform="translate(-27.722 -60.338)"
         ></path>
@@ -252,11 +252,11 @@ export const stacks: StacksType = {
             gradientTransform="translate(-129.242 -73.715) scale(6.18523)"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#3F873F"></stop>
-            <stop offset=".33" stop-color="#3F8B3D"></stop>
-            <stop offset=".637" stop-color="#3E9638"></stop>
-            <stop offset=".934" stop-color="#3DA92E"></stop>
-            <stop offset="1" stop-color="#3DAE2B"></stop>
+            <stop stopColor="#3F873F"></stop>
+            <stop offset=".33" stopColor="#3F8B3D"></stop>
+            <stop offset=".637" stopColor="#3E9638"></stop>
+            <stop offset=".934" stopColor="#3DA92E"></stop>
+            <stop offset="1" stopColor="#3DAE2B"></stop>
           </linearGradient>
           <linearGradient
             id="b"
@@ -267,10 +267,10 @@ export const stacks: StacksType = {
             gradientTransform="translate(-129.242 -73.715) scale(6.18523)"
             gradientUnits="userSpaceOnUse"
           >
-            <stop offset=".138" stop-color="#3F873F"></stop>
-            <stop offset=".402" stop-color="#52A044"></stop>
-            <stop offset=".713" stop-color="#64B749"></stop>
-            <stop offset=".908" stop-color="#6ABF4B"></stop>
+            <stop offset=".138" stopColor="#3F873F"></stop>
+            <stop offset=".402" stopColor="#52A044"></stop>
+            <stop offset=".713" stopColor="#64B749"></stop>
+            <stop offset=".908" stopColor="#6ABF4B"></stop>
           </linearGradient>
           <linearGradient
             id="c"
@@ -281,10 +281,10 @@ export const stacks: StacksType = {
             gradientTransform="translate(-129.242 -73.715) scale(6.18523)"
             gradientUnits="userSpaceOnUse"
           >
-            <stop offset=".092" stop-color="#6ABF4B"></stop>
-            <stop offset=".287" stop-color="#64B749"></stop>
-            <stop offset=".598" stop-color="#52A044"></stop>
-            <stop offset=".862" stop-color="#3F873F"></stop>
+            <stop offset=".092" stopColor="#6ABF4B"></stop>
+            <stop offset=".287" stopColor="#64B749"></stop>
+            <stop offset=".598" stopColor="#52A044"></stop>
+            <stop offset=".862" stopColor="#3F873F"></stop>
           </linearGradient>
         </defs>
       </>
@@ -370,8 +370,8 @@ export const stacks: StacksType = {
           y2="375.873"
           gradientTransform="matrix(82.4907 0 0 -81.4303 16634.416 30700.326)"
         >
-          <stop offset="0" stop-color="#f9a03c"></stop>
-          <stop offset="1" stop-color="#f7974e"></stop>
+          <stop offset="0" stopColor="#f9a03c"></stop>
+          <stop offset="1" stopColor="#f7974e"></stop>
         </linearGradient>
         <path
           fill="url(#d3js-original-a)"
@@ -386,8 +386,8 @@ export const stacks: StacksType = {
           y2="371.916"
           gradientTransform="matrix(40.2105 0 0 -40.4122 8003.203 15127)"
         >
-          <stop offset="0" stop-color="#f9a03c"></stop>
-          <stop offset="1" stop-color="#f7974e"></stop>
+          <stop offset="0" stopColor="#f9a03c"></stop>
+          <stop offset="1" stopColor="#f7974e"></stop>
         </linearGradient>
         <path
           fill="url(#d3js-original-b)"
@@ -402,8 +402,8 @@ export const stacks: StacksType = {
           y2="372.475"
           gradientTransform="matrix(41.0403 0 0 -39.9333 8224.5 14997.683)"
         >
-          <stop offset="0" stop-color="#f9a03c"></stop>
-          <stop offset="1" stop-color="#f7974e"></stop>
+          <stop offset="0" stopColor="#f9a03c"></stop>
+          <stop offset="1" stopColor="#f7974e"></stop>
         </linearGradient>
         <path
           fill="url(#d3js-original-c)"
@@ -418,8 +418,8 @@ export const stacks: StacksType = {
           y2="378.804"
           gradientTransform="matrix(255.8347 0 0 -242.016 51476.605 91789.102)"
         >
-          <stop offset="0" stop-color="#f26d58"></stop>
-          <stop offset="1" stop-color="#f9a03c"></stop>
+          <stop offset="0" stopColor="#f26d58"></stop>
+          <stop offset="1" stopColor="#f9a03c"></stop>
         </linearGradient>
         <path
           fill="url(#d3js-original-d)"
@@ -434,8 +434,8 @@ export const stacks: StacksType = {
           y2="378.218"
           gradientTransform="matrix(160.7307 0 0 -174.8133 32360.78 66184.883)"
         >
-          <stop offset="0" stop-color="#b84e51"></stop>
-          <stop offset="1" stop-color="#f68e48"></stop>
+          <stop offset="0" stopColor="#b84e51"></stop>
+          <stop offset="1" stopColor="#f68e48"></stop>
         </linearGradient>
         <path
           fill="url(#d3js-original-e)"
@@ -450,8 +450,8 @@ export const stacks: StacksType = {
           y2="376.532"
           gradientTransform="matrix(176.7653 0 0 -92.6293 35504.598 35022.56)"
         >
-          <stop offset="0" stop-color="#f9a03c"></stop>
-          <stop offset="1" stop-color="#f7974e"></stop>
+          <stop offset="0" stopColor="#f9a03c"></stop>
+          <stop offset="1" stopColor="#f7974e"></stop>
         </linearGradient>
         <path
           fill="url(#d3js-original-f)"
@@ -486,9 +486,9 @@ export const stacks: StacksType = {
             gradientTransform="translate(-.876 -.754) scale(.13472)"
             gradientUnits="userSpaceOnUse"
           >
-            <stop offset="0" stop-color="#69d3a7"></stop>
-            <stop offset=".823" stop-color="#2ab586"></stop>
-            <stop offset="1" stop-color="#1cae7f"></stop>
+            <stop offset="0" stopColor="#69d3a7"></stop>
+            <stop offset=".823" stopColor="#2ab586"></stop>
+            <stop offset="1" stopColor="#1cae7f"></stop>
           </linearGradient>
           <linearGradient
             id="a"
@@ -499,8 +499,8 @@ export const stacks: StacksType = {
             gradientTransform="translate(-.876 -.754) scale(.13472)"
             gradientUnits="userSpaceOnUse"
           >
-            <stop offset=".081" stop-color="#69d3a7"></stop>
-            <stop offset="1" stop-color="#69d3a7" stop-opacity="0"></stop>
+            <stop offset=".081" stopColor="#69d3a7"></stop>
+            <stop offset="1" stopColor="#69d3a7" stopOpacity="0"></stop>
           </linearGradient>
           <linearGradient
             id="c"
@@ -511,11 +511,11 @@ export const stacks: StacksType = {
             gradientTransform="translate(-.876 -.754) scale(.13472)"
             gradientUnits="userSpaceOnUse"
           >
-            <stop offset=".077" stop-color="#1cae7f"></stop>
-            <stop offset=".164" stop-color="#1ca379"></stop>
-            <stop offset=".316" stop-color="#1c8568"></stop>
-            <stop offset=".516" stop-color="#1b554d"></stop>
-            <stop offset=".719" stop-color="#1b1e2e"></stop>
+            <stop offset=".077" stopColor="#1cae7f"></stop>
+            <stop offset=".164" stopColor="#1ca379"></stop>
+            <stop offset=".316" stopColor="#1c8568"></stop>
+            <stop offset=".516" stopColor="#1b554d"></stop>
+            <stop offset=".719" stopColor="#1b1e2e"></stop>
           </linearGradient>
         </defs>
         <path
