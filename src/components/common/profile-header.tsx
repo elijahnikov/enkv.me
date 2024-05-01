@@ -14,9 +14,9 @@ export default function ProfileHeader() {
   const currentTimeInLondon = formatter.format(now);
 
   return (
-    <div className="left-0 mx-auto flex  flex-col justify-center xl:fixed xl:block xl:w-[600px]">
-      <div className="xl:pl-16">
-        <div className="flex justify-center xl:block">
+    <div className="mx-auto flex flex-col justify-center ">
+      <div>
+        <div className="flex justify-center">
           <Image
             src={
               "https://utfs.io/f/248fc5d3-0da0-4d86-85a1-a44e48020e27-h2az4q.jpg"
@@ -28,11 +28,11 @@ export default function ProfileHeader() {
             height={200}
           />
         </div>
-        <div className="mt-4 w-full flex-col pl-0 sm:mx-auto sm:flex sm:max-w-[500px] sm:justify-center xl:max-w-full">
+        <div className="mx-auto mt-4 flex w-full max-w-[500px] flex-col justify-center pl-0 ">
           <div className="flex items-center space-x-1">
             <h1 className="mt-4 text-[42px] font-bold">Elijah Posnikov</h1>
           </div>
-          <p className="text-md mt-2 w-[100%] text-neutral-700 dark:text-neutral-200 sm:text-[24px] xl:w-[80%]">
+          <p className="text-md mt-2 w-[100%] text-[24px] text-neutral-700 dark:text-neutral-200">
             Software developer with a keen eye for detail and fueled by a
             passion for crafting delightful experiences that are inclusive and
             intuitive.
