@@ -32,7 +32,7 @@ export default function ProfileHeader() {
           <div className="flex items-center space-x-1">
             <h1 className="mt-4 text-[42px] font-bold">Elijah Posnikov</h1>
           </div>
-          <p className="text-md mt-2 w-[100%] text-[24px] text-neutral-700 dark:text-neutral-200">
+          <p className="text-md mt-2 w-[100%] text-[20px] text-neutral-700 dark:text-neutral-200 xl:text-[24px]">
             Software developer with a keen eye for detail and fueled by a
             passion for crafting delightful experiences that are inclusive and
             intuitive.

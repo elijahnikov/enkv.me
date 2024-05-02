@@ -53,7 +53,7 @@ export default function SingleProject({ project }: { project: ProjectsType }) {
           </Link>
         </div>
       </div>
-      <div className="relative h-max w-[90vw] sm:w-full xl:w-max">
+      <div className="relative h-max w-full">
         <div className="absolute z-10 flex h-full w-full items-center justify-center rounded-xl bg-white opacity-0 transition-opacity duration-300 group-hover:opacity-30" />
         <div className="absolute z-10 flex h-full w-full items-center justify-center rounded-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100">
           <div className="text-center">
@@ -74,7 +74,7 @@ export default function SingleProject({ project }: { project: ProjectsType }) {
             height={0}
             onLoad={() => setImageLoaded(true)}
             sizes="100vw"
-            style={{ width: "100%", height: "auto" }}
+            style={{ width: "100%", height: "auto", maxWidth: "760px" }}
             className={cn(
               !imageLoaded ? "opacity-0" : "opacity-100",
               "animate mt-4 rounded-xl border border-neutral-200 bg-white shadow-sm",

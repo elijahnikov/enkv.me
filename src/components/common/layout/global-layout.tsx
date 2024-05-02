@@ -11,7 +11,7 @@ export default function PageLayout({
   return (
     <>
       <div className="z-20 h-screen ">
-        <main className="z-10 mx-auto h-full w-full items-center gap-6 bg-[#FAFAFA] py-16 dark:bg-[#141414] ">
+        <main className="z-10 mx-auto h-full w-full items-center gap-6 bg-[#FAFAFA] px-5 py-16 dark:bg-[#141414] xl:px-0">
           <div>
             <div className="flex flex">
               <main className="mx-auto w-full space-y-6">
